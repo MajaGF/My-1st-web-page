@@ -24,32 +24,32 @@
       format("svg"); /* Legacy iOS */
 
 @font-face {
-  font-family: "Itim", sans-serif;
-  src: local("Itim"), url("/fonts/Itim/itim-regular-webfont.eot"),
-    url("vitim-regular-webfont.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/Itim/itim-regular-webfont.woff2") format("woff2"),
-    url("/fonts/Itim/itim-regular-webfont.woff") format("woff"),
-    url("/fonts/Itim/Itim-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "Itim", sans-serif;
+	src: local("Itim"), url("/fonts/Itim/itim-regular-webfont.eot"),
+		url("vitim-regular-webfont.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/Itim/itim-regular-webfont.woff2") format("woff2"),
+		url("/fonts/Itim/itim-regular-webfont.woff") format("woff"),
+		url("/fonts/Itim/Itim-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }
 
 html {
-  color-scheme: dark light;
+	color-scheme: dark light;
 }
 body {
-  font-family: sans-serif;
-  background-color: #2d2d2f;
-  background-size: cover;
-  color: rgb(190, 185, 185);
-  padding-left: 30px;
-  margin: 15px;
+	font-family: sans-serif;
+	background-color: #2d2d2f;
+	background-size: cover;
+	color: rgb(190, 185, 185);
+	padding-left: 30px;
+	margin: 15px;
 }
 
 .header {
-  background-color: cyan;
-  color: #4e4e53;
-  padding: 15px;
+	background-color: cyan;
+	color: #4e4e53;
+	padding: 15px;
 }
 
 /*.responsive {
@@ -58,32 +58,32 @@ body {
 }*/
 
 .example {
-  background-color: rgb(143, 197, 244);
-  max-width: fit-content;
+	background-color: rgb(143, 197, 244);
+	max-width: fit-content;
 }
 p {
-  font-size: 14px;
+	font-size: 14px;
 }
 
 .text-visio-code {
-  color: rgb(232, 55, 152);
+	color: rgb(232, 55, 152);
 }
 
 h1 {
-  color: rgb(247, 247, 248);
+	color: rgb(247, 247, 248);
 }
 
 h2 {
-  color: rgb(63, 61, 67);
+	color: rgb(63, 61, 67);
 }
 h3 {
-  color: #f2a58e;
-  text-align: center;
+	color: #f2a58e;
+	text-align: center;
 }
 
 h4 {
-  font-family: "Itim ";
-  color: rgb(130, 171, 130);
+	font-family: "Itim ";
+	color: rgb(130, 171, 130);
 }
 
 /*div {
@@ -100,60 +100,62 @@ h4 {
 	flex: 1;
 } */
 
-/* the CSS box model */
-
-/* 	Margin:
-	Border:
-	Padding: */
+/*BOX MODEL NA STRANICI CSSBOXMODEL*/
+/* the CSS BOX MODEL - slaže se po sljedećem redu:
+	margin:
+	border:
+	padding: */
 
 .box-cssboxmodel {
-  background: rgb(187, 237, 187);
-  width: fit-content;
+	background: rgb(187, 237, 187);
+	width: fit-content;
 
-  margin-top: 50px;
-  margin-bottom: 40px;
-  margin-left: 20px;
+	margin-top: 50px;
+	margin-bottom: 40px;
+	margin-left: 20px;
 
-  border-left-width: 10px;
-  border-left-color: rgb(27, 14, 209);
-  border-left-style: solid;
+	border-left-width: 10px;
+	border-left-color: rgb(27, 14, 209);
+	border-left-style: solid;
 
-  border-right-width: 20px;
-  border-right-color: rgb(138, 68, 235);
-  border-right-style: dotted;
+	border-right-width: 20px;
+	border-right-color: rgb(138, 68, 235);
+	border-right-style: dotted;
 
-  border-bottom-width: 15px;
-  border-bottom-color: red;
-  border-bottom-style: double;
+	border-bottom-width: 15px;
+	border-bottom-color: red;
+	border-bottom-style: double;
 
-  padding: 100px;
+	padding: 100px;
 }
 
 .box-lightbackground {
-  color: rgb(27, 14, 209);
+	color: rgb(27, 14, 209);
 }
 
 .box-elements {
-  background-color: #464649;
-  border: solid;
-  border-radius: 10px;
-  border-color: antiquewhite;
-  padding: 20px;
-  margin-block-start: 5px;
-  width: fit-content;
+	background-color: #464649;
+	border: solid;
+	border-radius: 10px;
+	border-color: antiquewhite;
+	padding: 20px;
+	margin-block-start: 5px;
+	width: fit-content;
 }
+
+/*LINKOVI*/
 
 /* unvisited link */
 a.link {
-  color: #0000ff;
+	color: #0000ff;
 }
 /* visited link */
 a:visited {
-  color: rgb(223, 43, 166);
+	color: rgb(223, 43, 166);
 }
 /* mouse over link */
 a:hover {
-  color: rgb(11, 224, 82);
+	color: rgb(11, 224, 82);
 }
 
 /*a::before {
@@ -169,72 +171,107 @@ a:hover {
 }*/
 
 .shoutout {
-  text-align: end;
-  font-size: 10px;
+	text-align: end;
+	font-size: 10px;
 }
 
-.table-elementi thead
-{
-  background-color: #0a3c52;
-  color: #fff;
-  padding: 15px 10px;
-    }
+/*TABLICE*/
+/*TABLICA NA STRANICI ELEMENTI*/
+
+.table-elementi table {
+	border-collapse: collapse;
+	border: solid rgb(200, 200, 200);
+	border-radius: 5px;
+	box-shadow: 15px 20px 30px 50px rgb (red);
+	letter-spacing: 1px;
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+.table-elementi caption {
+	padding: 10px;
+	caption-side: top;
+}
+
+.table-elementi thead {
+	background-color: #0a3c52;
+	color: #fff;
+	padding: 15px 10px;
+}
+
+.table-elementi tbody {
+	background-color: #1f5f2f;
+}
+
+.table-elementi td,
+.table-elementi th {
+	border: 1px solid rgb(190, 190, 190);
+	padding: 15px 30px;
+	text-align: center;
+}
+
+/*TABLICA NA STRANICI TABLICA-PRIMJER*/
 
 .kratki-naziv-tablice table {
-      border-collapse: collapse;
-      border: 2px solid rgb(200, 200, 200);
-      letter-spacing: 1px;
-      font-family: sans-serif;
-      font-size: 14px;
-  }
- 
-.kratki-naziv-tablice caption {
-      padding: 10px;
-      caption-side: top;
-      padding: 20px;
-  }
-  
-  .kratki-naziv-tablice thead
-{
-    background-color: #e5881c;
-    color: #fff;
-  }
-
-.kratki-naziv-tablice tbody {
-  background-color: #5a7e1b;
+	border-collapse: collapse;
+	border: 2px solid rgb(200, 200, 200);
+	letter-spacing: 1px;
+	font-family: sans-serif;
+	font-size: 14px;
 }
 
-.kratki-naziv-tablice td, .table-elementi th {
-    border: 1px solid rgb(190, 190, 190);
-    padding: 15px 10px;
-    text-align: center;
+.kratki-naziv-tablice caption {
+	padding: 10px;
+	caption-side: top;
+	padding: 20px;
+}
+
+.kratki-naziv-tablice thead {
+	background-color: #e5881c;
+	color: #fff;
+}
+
+.kratki-naziv-tablice thead tr {
+	height: 40px;
+}
+
+.kratki-naziv-tablice tbody {
+	background-color: #5a7e1b;
+}
+
+.kratki-naziv-tablice td,
+.table-elementi th {
+	border: 1px solid rgb(190, 190, 190);
+	padding: 15px 10px;
+	text-align: center;
 }
 
 .kratki-naziv-tablice tfoot {
-  background-color: #ae1cda;
+	background-color: #ae1cda;
 }
 
-.table-simboli-znakovi tbody
-{
-  background-color: #1f5f2f;
+/*TABLICA NA STRANICI SIMBOLI ZNAKOVI*/
+
+.table-simboli-znakovi table {
+	border-collapse: collapse;
+	border: 2px solid rgb(200, 200, 200);
+	letter-spacing: 1px;
+	font-family: sans-serif;
+	font-size: 0.8rem;
 }
 
 .table-simboli-znakovi caption {
-    padding: 10px;
-    caption-side: top;
+	padding: 10px;
+	caption-side: top;
 }
 
-.table-simboli-znakovi table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    font-size: 0.8rem;
+.table-simboli-znakovi tbody {
+	background-color: #1f5f2f;
 }
 
-.table-simboli-znakovi td, .table-elementi th {
-    border: 1px solid rgb(190, 190, 190);
-    padding: 15px 30px;
-    text-align: center;
+.table-simboli-znakovi td,
+.table-elementi th {
+	border: 1px solid rgb(190, 190, 190);
+	padding: 15px 30px;
+	text-align: center;
 }
-
