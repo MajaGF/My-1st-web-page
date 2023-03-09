@@ -22,75 +22,103 @@
 
 		<h4>HTML element &lt;table&gt;</h4>
 
-		<p
-			>HTML element &lt;table&gt; predstavlja dvodimenzionalnu tablicu koja se
-			sastoji od redaka i stupaca ćelija koje sadrže podatke</p
-		>
+		<p>
+			HTML element &lt;table&gt; predstavlja dvodimenzionalnu tablicu koja se
+			sastoji od redaka i stupaca ćelija koje sadrže podatke
+		</p>
 
-		<p
-			><span class="text-visio-code">&lt;table&gt;</span> element -početak svake
+		<p>
+			<span class="text-visio-code">&lt;table&gt;</span> element -početak svake
 			tablice (dodati klasu unutar elementa ako ćemo imati više tablica drugačijih
-			karakteristika!)</p
-		>
+			karakteristika!)
+		</p>
 
-		<p
-			><span class="text-visio-code">&lt;caption&gt;</span> element - naziv tablice
+		<p>
+			<span class="text-visio-code">&lt;caption&gt;</span> element - naziv tablice
 			(Prema zadanim postavkama, naslov tablice bit će središnje poravnat iznad
-			tablice. Izgled se mijenja u CSS-u).</p
-		>
+			tablice. Izgled se mijenja u CSS-u).
+		</p>
 
-		<p
-			><span class="text-visio-code">&lt;thead&gt;</span> element - grupiranje
-			sadržaja <strong>zaglavlja</strong> u HTML tablici.</p
-		>
+		<p>
+			<span class="text-visio-code">&lt;thead&gt;</span> element - grupiranje
+			sadržaja <strong>zaglavlja</strong> u HTML tablici.
+		</p>
 
-		<p
-			><span class="text-visio-code">&lt;tr&gt;</span> element (<em>table row</em>)
-			- definira red u HTML tablici</p
-		>
+		<p>
+			<span class="text-visio-code">&lt;tr&gt;</span> element (<em>table row</em>)
+			- definira red u HTML tablici
+		</p>
 
-		<p
-			><span class="text-visio-code">&lt;th&gt;</span> element (<em
-				>table header</em
+		<p>
+			<span class="text-visio-code">&lt;th&gt;</span> element (<em>table header</em
 			>) - definira ćeliju u HTML tablici. Dodavanjem atributa
 			<span class="text-visio-code">scope="col"</span> ili
 			<span class="text-visio-code">scope="row"</span> unutar ovog elementa
-			definiramo ćeliju kao stupa ili redak.</p
-		>
+			definiramo ćeliju kao stupa ili redak.
+		</p>
 
-		<p
-			><span class="text-visio-code">&lt;tbody&gt;</span> element - skup redaka
-			koji sačinjavaju "tijelo" HTML tablice</p
-		>
+		<p>
+			<span class="text-visio-code">&lt;tbody&gt;</span> element - skup redaka koji
+			sačinjavaju "tijelo" HTML tablice
+		</p>
 
-		<p
-			><span class="text-visio-code">&lt;td&gt;</span> element - (<em
+		<p>
+			<span class="text-visio-code">&lt;td&gt;</span> element - (<em
 				>table data cell</em
-			>) - definira ćeliju tablice koja sadrži podatke</p
-		>
+			>) - definira ćeliju tablice koja sadrži podatke
+		</p>
 
-		<p
-			><span class="text-visio-code">&lt;td&gt; colspan=""</span> element - broj
-			stupaca koje ćemo spojiti (merge); pišemo ga u stupcu s kojim počinjemo
-			spajanje i ne pišemo stupce koje spajamo</p
-		>
+		<p>
+			<span class="text-visio-code">&lt;td&gt; colspan=""</span> element - broj
+			stupaca koje ćemo spojiti (merge); pišemo ga u ćeliji s kojom počinjemo
+			spajanje stupaca - OBAVEZNO prije spremanja ("save") izbrisati red u kodu
+			koji se odnosi na stupac s kojim spajamo prvi stupac (inače neće formatirati
+			dobro!!)
+		</p>
 
-		<p
-			><span class="text-visio-code">&lt;td&gt; rowspan=""</span> element - broj
+		<p>
+			<span class="text-visio-code">&lt;td&gt; rowspan=""</span> element - broj
 			ćelija koje ćemo spojiti (merge); pišemo ga u ćeliji s kojom počinjemo
-			spajanje i ne pišemo ćelije koje spajamo</p
-		>
+			spajanje redova - OBAVEZNO prije spremanja ("save") izbrisati red u kodu koji
+			se odnosi na red s kojim spajamo prvi prvi (inače neće formatirati dobro!!)
+		</p>
 
-		<p
-			><span class="text-visio-code">&lt;tfoot&gt;</span> element - za prikazivanje
-			npr. sažetka tablice</p
-		>
+		<p>
+			<span class="text-visio-code">&lt;tfoot&gt;</span> element - za prikazivanje
+			npr. sažetka tablice
+		</p>
 
-		<p
-			>definiranje veličine/visine/širine redaka, pzadinske boje
-			ćelije/reda/stupca, boje fonta i sl. radimo u CSS-u!!</p
-		>
+		<br />
 
+		<p>
+			<strong
+				>definiranje veličine/visine/širine redaka, pzadinske boje
+				ćelije/reda/stupca, boje fonta i sl. radimo u CSS-u!!</strong
+			>
+		</p>
+
+		<br />
+
+		<p>Sljdeći prizak napravljanjen je kao flex-box:</p>
+
+		<br />
+
+		<div class="column-tablice">
+			<article class="child-column-tablice">
+				<p>KOD U HTML-u</p>
+				<img src="/images/kod-tablica-html.jpg" alt="kod tablice u HTML-u" />
+			</article>
+
+			<article class="child-column-tablice">
+				<p>FORMATIRANJE KODA U CSS-u</p>
+				<img src="/images/format-tablica-css.jpg" alt="kod tablice u HTML-u" />
+			</article>
+
+			<article class="child-column-tablice">
+				<p>IZGLED TABLICE</p>
+				<img src="/images/tablica-izgled.jpg" alt="kod tablice u HTML-u" />
+			</article>
+		</div>
 		<br />
 
 		<p>Odlično obajašnjenje u videu na sljedećoj poveznici:</p>

@@ -19,7 +19,9 @@
 
 	<body>
 		<table class="kratki-naziv-tablice">
-			<caption>Naslov tablice</caption>
+			<caption>
+				Naslov tablice
+			</caption>
 			<thead>
 				<tr>
 					<th scope="col">1. stupac</th>
@@ -31,16 +33,14 @@
 			<tbody>
 				<tr>
 					<td>1. ćelija u 1. stupcu</td>
-					<td>1. ćelija u 2. stupcu</td>
+					<td rowspan="2">1. i 2. ćelija u 2. stupcu</td>
 					<td>1. ćelija u 3. stupcu</td>
 				</tr>
-
 				<tr>
 					<td>2. ćelija u 1. stupcu</td>
-					<td>2. ćelija u 2. stupcu</td>
+					<!--<td>2. ćelija u 2. stupcu</td>-->
 					<td>2. ćelija u 3. stupcu</td>
 				</tr>
-
 				<tr>
 					<td>3. ćelija u 1. stupcu</td>
 					<td>3. ćelija u 2. stupcu</td>
@@ -50,8 +50,8 @@
 
 			<tfoot>
 				<tr>
-					<td>zadnja ćelija u 1. stupcu</td>
-					<td>zadnja ćelija u 2. stupcu</td>
+					<td colspan="2">zadnje dvije ćelije u 1. stupcu spojene u jednu</td>
+					<!--<td>2. ćelija u 3. stupcu</td>-->
 					<td>zadnja ćelija u 3. stupcu</td>
 				</tr>
 			</tfoot>
