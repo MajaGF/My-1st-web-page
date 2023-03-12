@@ -6,27 +6,10 @@
 &gt; stands for the greater-than sign: >
 */
 
-/* roboto-regular - latin 
-@font-face {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  src: local("Roboto"),
-    url("/fonts/roboto-v30-latin/roboto-v30-latin-regular.woff") format("woff"),
-    url("/fonts/roboto-v30-latin/roboto-v30-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("/fonts/roboto-v30-latin/roboto-v30-latin-regular.woff2")
-      format("woff2"),
-    url("/fonts/roboto-v30-latin/roboto-v30-latin-regular.eot"),
-    url("/fonts/roboto-v30-latin/roboto-v30-latin-regular.ttf")
-      format("truetype"),
-    url("/fonts/roboto-v30-latin/roboto-v30-latin-regular.svg#Roboto")
-      format("svg"); /* Legacy iOS */
-
 @font-face {
 	font-family: "Itim", sans-serif;
 	src: local("Itim"), url("/fonts/Itim/itim-regular-webfont.eot"),
-		url("vitim-regular-webfont.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/Itim/itim-regular-webfont.eot?#iefix") format("embedded-opentype"),
 		url("/fonts/Itim/itim-regular-webfont.woff2") format("woff2"),
 		url("/fonts/Itim/itim-regular-webfont.woff") format("woff"),
 		url("/fonts/Itim/Itim-Regular.ttf") format("truetype");
@@ -34,35 +17,94 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: "playfair_displaybold_italic";
+	src: url("/fonts/PlayfairDisplay/8playfairdisplay-bolditalic-webfont.woff2")
+			format("woff2"),
+		url("/fonts/PlayfairDisplay/playfairdisplay-bolditalic-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "playfair_display_scblack";
+	src: url("/fonts/PlayfairDisplay/playfairdisplaysc-black-webfont.woff2")
+			format("woff2"),
+		url("/fonts/PlayfairDisplay/playfairdisplaysc-black-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "roboto_condensedregular";
+	src: url("/fonts/Roboto/robotocondensed-regular-webfont.woff2") format("woff2"),
+		url("/fonts/Roboto/robotocondensed-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "robotoregular";
+	src: url("/fonts/Roboto/roboto-regular-webfont.woff2") format("woff2"),
+		url("/fonts/Roboto/roboto-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 html {
 	color-scheme: dark light;
 }
-body {
-	font-family: sans-serif;
-	background-color: #2d2d2f;
+
+/*BACKGROUND SLIKE*/
+#index-page-bg {
+	background: url(/images/tipkovnica-crna-pozadina.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: cover;
-	color: rgb(190, 185, 185);
-	padding-left: 30px;
-	margin: 15px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 }
 
-.header {
+#images-page-bg {
+	background-color: #3b398b;
+	/*background: url(/images/tamna_yousef-espanioly-NmbmyVCZuPY-unsplash.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;*/
+}
+body {
+	font-family: robotoregular;
+	color: rgb(190, 185, 185);
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+/*.body-font-dark {
+	font-family: sans-serif;
+	color: rgb(8, 11, 87);
+	padding-left: 70px;
+}*/
+
+header {
 	background-color: cyan;
 	color: #4e4e53;
 	padding: 15px;
 }
-
-/*.responsive {
-  width: 100%;
-  max-height: 300px;
-}*/
 
 .example {
 	background-color: rgb(143, 197, 244);
 	max-width: fit-content;
 }
 p {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .text-visio-code {
@@ -77,13 +119,16 @@ h2 {
 	color: rgb(63, 61, 67);
 }
 h3 {
-	color: #f2a58e;
+	font-family: playfair_display_scblack;
+	font-size: 50px;
+	color: #c96242;
 	text-align: center;
 }
 
 h4 {
 	font-family: "Itim ";
-	color: rgb(130, 171, 130);
+	color: rgb(227, 240, 52);
+	font-size: 20px;
 }
 
 /*div {
@@ -182,7 +227,6 @@ a:hover {
 	border-collapse: collapse;
 	border: solid rgb(200, 200, 200);
 	border-radius: 5px;
-	box-shadow: 15px 20px 30px 50px rgb (red);
 	letter-spacing: 1px;
 	font-family: sans-serif;
 	font-size: 14px;
@@ -295,4 +339,35 @@ a:hover {
 	text-align: center;
 	border: 20px groove rgb(213, 139, 225);
 	box-sizing: border-box;
+}
+
+/*list-none {
+	list-style: "♠";
+	list-style-position: outside !important;
+}*/
+
+/* MIJENJANJE OZNAKE LISTE*/
+.list-spade {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 30px;
+	text-indent: -30px;
+}
+
+.list-spade2::before {
+	content: "♠";
+	color: rgb(227, 232, 93);
+	display: inline-block;
+	width: 30px;
+	text-indent: 0;
+	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	background: rgb(239, 174, 249);
+	color: rgb(8, 8, 8);
+	padding: 10px 15px;
+	text-decoration: none;
+	border-radius: 10px;
 }
