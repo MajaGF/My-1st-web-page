@@ -53,9 +53,10 @@
 	font-style: normal;
 }
 
-html {
+/*html {
 	color-scheme: dark light;
-}
+	height: 100%;
+}*/
 
 /*BACKGROUND SLIKE*/
 #index-page-bg {
@@ -70,7 +71,20 @@ html {
 }
 
 #images-page-bg {
-	background-color: #3b398b;
+	background-image: linear-gradient(
+		#d16ba5,
+		#c777b9,
+		#ba83ca,
+		#aa8fd8,
+		#9a9ae1,
+		#8aa7ec,
+		#79b3f4,
+		#69bff8,
+		#52cffe,
+		#41dfff,
+		#46eefa,
+		#5ffbf1
+	);
 	/*background: url(/images/tamna_yousef-espanioly-NmbmyVCZuPY-unsplash.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -80,43 +94,34 @@ html {
 	-moz-background-size: cover;
 	-o-background-size: cover;*/
 }
-body {
-	font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
-	color: rgb(190, 185, 185);
-	margin: 0;
-	padding-left: 70px;
-	padding-right: 70px;
-	font-size: 18px;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 header {
 	background-color: rgb(42, 44, 44);
-	padding: 15px;
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
+	background-color: #7ef17a;
 }
 
-.container-index-page {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-section {
-	float: right;
-	width: 80%;
-}
-
-aside {
-	float: left;
-	width: 20%;
+body {
+	font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+	color: rgb(190, 185, 185);
+	margin: 0;
+	font-size: 18px;
+	min-height: 100%;
+	background-color: #65a1eb;
 }
 
 footer {
 	position: absolute;
 	bottom: 0;
-	width: 90%;
 	color: rgb(253, 253, 253);
-	clear: both;
+	background-color: #ae1cda;
 }
 
 .made-by {
@@ -124,12 +129,14 @@ footer {
 	text-align: center;
 	font-size: 10px;
 	float: left;
+	background-color: red;
 }
 
 .shoutout {
 	text-align: end;
 	font-size: 10px;
 	float: right;
+	background-color: #ae1cda;
 }
 
 .button {
@@ -152,23 +159,22 @@ footer {
 }
 
 h1 {
-	color: rgb(247, 247, 248);
-}
-
-h2 {
-	color: rgb(63, 61, 67);
-}
-h3 {
 	font-family: "Playfair Display scblack", serif;
-	font-size: 50px;
 	color: #c96242;
 	text-align: center;
 }
 
-h4 {
+h2 {
 	font-family: "Itim ";
 	color: rgb(227, 240, 52);
 	font-size: 20px;
+}
+h3 {
+	color: rgb(247, 247, 248);
+}
+
+h4 {
+	color: rgb(63, 61, 67);
 }
 
 /*BOX MODEL NA STRANICI CSSBOXMODEL*/
@@ -329,27 +335,6 @@ a:hover {
 	text-align: center;
 }
 
-/*FLEX BOX U TABLICE* (https://css-tricks.com/snippets/css/a-guide-to-flexbox/)/
-
-/*.colum-tablice je kontejner!*/
-.column-tablice {
-	display: flex;
-	/*flex-direction: row;   ----- ovo je dafult vrijednost!*/
-	justify-content: space-around;
-	align-items: flex-start;
-	gap: 10px;
-	row-gap: 20px;
-	column-gap: 20px;
-}
-
-/* oznaka > * znači da se sva svojstva odnose na sve child elemenata*/
-.column-tablice > * {
-	align-self: flex-start;
-	text-align: center;
-	border: 20px groove rgb(213, 139, 225);
-	box-sizing: border-box;
-}
-
 /*list-none {
 	list-style: "♠";
 	list-style-position: outside !important;
@@ -370,4 +355,12 @@ a:hover {
 	width: 30px;
 	text-indent: 0;
 	text-align: center;
+}
+
+/*GRID U TABLICE*/
+.column-tablice {
+	display: grid;
+	gap: 5px;
+	grid-template-columns: 1fr 1fr 1fr;
+	border: solid red;
 }
