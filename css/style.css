@@ -18,7 +18,7 @@
 }
 
 @font-face {
-	font-family: "playfair_displaybold_italic";
+	font-family: "Playfair Display italic";
 	src: url("/fonts/PlayfairDisplay/8playfairdisplay-bolditalic-webfont.woff2")
 			format("woff2"),
 		url("/fonts/PlayfairDisplay/playfairdisplay-bolditalic-webfont.woff")
@@ -28,7 +28,7 @@
 }
 
 @font-face {
-	font-family: "playfair_display_scblack";
+	font-family: "Playfair Display scblack";
 	src: url("/fonts/PlayfairDisplay/playfairdisplaysc-black-webfont.woff2")
 			format("woff2"),
 		url("/fonts/PlayfairDisplay/playfairdisplaysc-black-webfont.woff")
@@ -38,7 +38,7 @@
 }
 
 @font-face {
-	font-family: "roboto_condensedregular";
+	font-family: "Roboto_Condensed";
 	src: url("/fonts/Roboto/robotocondensed-regular-webfont.woff2") format("woff2"),
 		url("/fonts/Roboto/robotocondensed-regular-webfont.woff") format("woff");
 	font-weight: normal;
@@ -46,7 +46,7 @@
 }
 
 @font-face {
-	font-family: "robotoregular";
+	font-family: "Roboto";
 	src: url("/fonts/Roboto/roboto-regular-webfont.woff2") format("woff2"),
 		url("/fonts/Roboto/roboto-regular-webfont.woff") format("woff");
 	font-weight: normal;
@@ -81,30 +81,70 @@ html {
 	-o-background-size: cover;*/
 }
 body {
-	font-family: robotoregular;
+	font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
 	color: rgb(190, 185, 185);
+	margin: 0;
 	padding-left: 70px;
 	padding-right: 70px;
+	font-size: 18px;
 }
 
-/*.body-font-dark {
-	font-family: sans-serif;
-	color: rgb(8, 11, 87);
-	padding-left: 70px;
-}*/
-
 header {
-	background-color: cyan;
-	color: #4e4e53;
+	background-color: rgb(42, 44, 44);
 	padding: 15px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.container-index-page {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section {
+	float: right;
+	width: 80%;
+}
+
+aside {
+	float: left;
+	width: 20%;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 90%;
+	color: rgb(253, 253, 253);
+	clear: both;
+}
+
+.made-by {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+	font-size: 10px;
+	float: left;
+}
+
+.shoutout {
+	text-align: end;
+	font-size: 10px;
+	float: right;
+}
+
+.button {
+	display: inline-block;
+	min-width: fit-content;
+	background: rgb(88, 86, 88);
+	color: rgb(8, 8, 8);
+	padding: 5px 10px;
+	text-decoration: none;
+	border-radius: 10px;
 }
 
 .example {
 	background-color: rgb(143, 197, 244);
 	max-width: fit-content;
-}
-p {
-	font-size: 16px;
 }
 
 .text-visio-code {
@@ -119,7 +159,7 @@ h2 {
 	color: rgb(63, 61, 67);
 }
 h3 {
-	font-family: playfair_display_scblack;
+	font-family: "Playfair Display scblack", serif;
 	font-size: 50px;
 	color: #c96242;
 	text-align: center;
@@ -130,20 +170,6 @@ h4 {
 	color: rgb(227, 240, 52);
 	font-size: 20px;
 }
-
-/*div {
-  background-color: rgb(205, 239, 227);
-  max-width: fit-content;
-  border: solid 1px;
-  border-style: dashed;
-  border-radius: 10px;
-  border-color: #000099;
-  padding: 10px;
-}*/
-
-/* .even-columns > * {
-	flex: 1;
-} */
 
 /*BOX MODEL NA STRANICI CSSBOXMODEL*/
 /* the CSS BOX MODEL - slaže se po sljedećem redu:
@@ -192,7 +218,7 @@ h4 {
 
 /* unvisited link */
 a.link {
-	color: #0000ff;
+	color: #8a7af1;
 }
 /* visited link */
 a:visited {
@@ -201,23 +227,6 @@ a:visited {
 /* mouse over link */
 a:hover {
 	color: rgb(11, 224, 82);
-}
-
-/*a::before {
-  content: "🔗";
-}*/
-
-/*.local-link::before {
-  content: url("../../media/examples/firefox-logo.svg");
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-}*/
-
-.shoutout {
-	text-align: end;
-	font-size: 10px;
 }
 
 /*TABLICE*/
@@ -361,13 +370,4 @@ a:hover {
 	width: 30px;
 	text-indent: 0;
 	text-align: center;
-}
-
-.button {
-	display: inline-block;
-	background: rgb(239, 174, 249);
-	color: rgb(8, 8, 8);
-	padding: 10px 15px;
-	text-decoration: none;
-	border-radius: 10px;
 }
