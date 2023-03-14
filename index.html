@@ -14,98 +14,118 @@
 	<body>
 		<header>
 			<h1 title="HTML-CSS">HTML &amp; CSS</h1>
+
+			<nav>
+				<ul class="nav-list">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Information</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
 		</header>
 		<!-- <img src="images/html-css.jpg" alt="Foto html css" class="responsive" /> -->
 		<!-- shortcut za ovu oznaku preko tipkovnice je SHIFT+ALT+A-->
 
-		<main>
-			<p>
-				Za početak kodiranja internet stranica potrebno je preuzeti neki dobar
-				program za uređivanje koda <em>(Code Editor)</em>.
-			</p>
+		<div class="grid-index-column">
+			<div class="index-column1">
+				<p>
+					Za početak kodiranja internet stranica potrebno je preuzeti neki dobar
+					program za uređivanje koda <em>(Code Editor)</em>.
+				</p>
 
-			<p>Neki od softvera otvorenog koda <em>(open source)</em>:</p>
+				<p>Neki od softvera otvorenog koda <em>(open source)</em>:</p>
 
-			<ul>
-				<li>
-					<a href="https://code.visualstudio.com/" target="_blank"
-						>Visual Code Editor</a
+				<ul>
+					<li>
+						<a href="https://code.visualstudio.com/" target="_blank"
+							>Visual Code Editor</a
+						>
+					</li>
+					<li><a href="https://atom.io/" target="_blank">Atom</a></li>
+					<li><a href="http://brackets.io/" target="_blank">Brackets</a></li>
+					<li>
+						<a href="https://notepad-plus-plus.org/" target="_blank">Notepad ++</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="index-column2">
+				<h2>Što je HTML?</h2>
+				<p>
+					HTML je jezik sastavljen od <strong>elemenata</strong> koji se mogu
+					primijeniti na dijelove teksta kako bi im se dalo različito značenje u
+					dokumentu (odlomak, paragraf, popis s grafičkim oznakama tablica ili dio
+					tablice i sl.).
+				</p>
+				<p>
+					Dokument je potrebno strukturirati u logičke odjeljke (zaglavlje, stupce,
+					navigacijski izbornik) i ugraditi sadržaje poput slika i videozapisa na
+					stranicu.
+				</p>
+			</div>
+
+			<div class="index-column3">
+				<h2>Što je CSS?</h2>
+				<p>
+					Cascading Style Sheets — ili CSS — se koristi za njegovo stiliziranje i
+					izgled HTML dokumenta, na primjer promijenu fonta, boje, veličine i razmaka
+					sadržaja, podijeliti sadržaj u više stupaca ili dodati animacije i druge
+					ukrasne značajke.
+				</p>
+				<p>Ili jednostavnije rečeno - služi za sastavljanje web stranice.</p>
+			</div>
+
+			<div class="index-column4">
+				<p>
+					<a class="button" href="htmlstruktura.html" target="_blank"
+						>STRUKTURA HTML STRANICE</a
 					>
-				</li>
-				<li><a href="https://atom.io/" target="_blank">Atom</a></li>
-				<li><a href="http://brackets.io/" target="_blank">Brackets</a></li>
-				<li>
-					<a href="https://notepad-plus-plus.org/" target="_blank">Notepad ++</a>
-				</li>
-			</ul>
+				</p>
 
-			<h2>Što je HTML?</h2>
-			<p>
-				HTML je jezik sastavljen od <strong>elemenata</strong> koji se mogu
-				primijeniti na dijelove teksta kako bi im se dalo različito značenje u
-				dokumentu (odlomak, paragraf, popis s grafičkim oznakama tablica ili dio
-				tablice i sl.).
-			</p>
-			<p>
-				Dokument je potrebno strukturirati u logičke odjeljke (zaglavlje, stupce,
-				navigacijski izbornik) i ugraditi sadržaje poput slika i videozapisa na
-				stranicu.
-			</p>
+				<p>
+					<a class="button" href="elementi.html" target="_blank">ELEMENTI</a>
+				</p>
 
-			<h2>Što je CSS?</h2>
-			<p>
-				Cascading Style Sheets — ili CSS — se koristi za njegovo stiliziranje i
-				izgled HTML dokumenta, na primjer promijenu fonta, boje, veličine i razmaka
-				sadržaja, podijeliti sadržaj u više stupaca ili dodati animacije i druge
-				ukrasne značajke.
-			</p>
-			<p>Ili jednostavnije rečeno - služi za sastavljanje web stranice.</p>
+				<p>
+					<a class="button" href="atrbuti.html" target="_blank">ATRIBUTI</a>
+				</p>
 
-			<p>
-				<a class="button" href="htmlstruktura.html" target="_blank"
-					>STRUKTURA HTML STRANICE</a
-				>
-			</p>
+				<p>
+					<a class="button" href="poveznice.html" target="_blank">POVEZNICE</a>
+				</p>
 
-			<p>
-				<a class="button" href="elementi.html" target="_blank">ELEMENTI</a>
-			</p>
+				<p>
+					<a class="button" href="cssboxmodel.html" target="_blank">CSS BOX MODEL</a>
+				</p>
 
-			<p>
-				<a class="button" href="atrbuti.html" target="_blank">ATRIBUTI</a>
-			</p>
+				<p>
+					<a class="button" href="images.html" target="_blank">SLIKE</a>
+				</p>
 
-			<p>
-				<a class="button" href="poveznice.html" target="_blank">POVEZNICE</a>
-			</p>
-
-			<p>
-				<a class="button" href="cssboxmodel.html" target="_blank">CSS BOX MODEL</a>
-			</p>
-
-			<p>
-				<a class="button" href="images.html" target="_blank">SLIKE</a>
-			</p>
-
-			<p>
-				<a class="button" href="fontovi.html" target="_blank">FONTOVI</a>
-			</p>
-		</main>
-
-		<div class="made-by"><em>Made by: MGF 2023</em></div>
-
-		<!--shoutout to the author of background image on this page-->
-		<div class="shoutout">
-			Background photo by
-			<a
-				href="https://unsplash.com/@quincoetzee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-				>Quinton Coetzee</a
-			>
-			on
-			<a
-				href="https://unsplash.com/photos/u-n1AFjUclo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-				>unsplash</a
-			>
+				<p>
+					<a class="button" href="fontovi.html" target="_blank">FONTOVI</a>
+				</p>
+			</div>
 		</div>
+
+		<footer>
+			<div class="made-by"><em>Made by: MGF 2023</em></div>
+
+			<!--shoutout to the author of background image on this page-->
+			<div class="shoutout">
+				Background photo by
+				<a
+					href="https://unsplash.com/@quincoetzee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+					>Quinton Coetzee</a
+				>
+				on
+				<a
+					href="https://unsplash.com/photos/u-n1AFjUclo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+					>unsplash</a
+				>
+			</div>
+		</footer>
 	</body>
 </html>
