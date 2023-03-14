@@ -123,13 +123,14 @@ body {
 	color: rgb(190, 185, 185);
 	margin: 0;
 	font-size: 18px;
-	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
-footer {
-	position: fixed;
-	bottom: 0;
-	color: rgb(253, 253, 253);
+main {
+	padding: 1rem;
+	flex-grow: 1;
 }
 
 .grid-index-column {
@@ -171,32 +172,80 @@ footer {
 	grid-row-start: 1;
 	grid-row-end: 3;
 }
-/*@media (min-width: 40em) {
-	.grid-index-column {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}*/
 
-.made-by {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	text-align: center;
-	font-size: 10px;
-	float: left;
-	background-color: red;
+footer {
+	background-color: #0a3c52;
+	color: rgb(253, 253, 253);
+	padding: 1rem;
 }
 
-.shoutout {
-	text-align: end;
+footer a {
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+footer a:hover {
+	color: rgb(134, 131, 131);
+	text-decoration: none;
+}
+
+.index-footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.index-footer-main {
+	display: flex;
+	margin-bottom: 1rem;
+}
+
+.index-footer-columns {
+	flex-basis: 200px;
+	flex-grow: 1;
+	text-align: center;
+	font-size: 12px;
+}
+
+.index-footer-link {
+	display: block;
+	width: max-content;
+	padding: 5px 10px;
+	margin: 0 auto;
+}
+
+.index-footer-bottom {
+	display: flex;
 	font-size: 10px;
-	float: right;
-	background-color: #ae1cda;
+}
+
+.copyright {
+	margin-right: auto;
+}
+
+.index-footer-social {
+	font-size: 20px;
+	margin-left: 1.5rem;
+	padding-bottom: 10px;
+}
+footer .fa-brands {
+	color: lightblue;
+}
+
+footer .fa-brands:hover {
+	color: rgb(8, 4, 135);
+	transition: color 0.3s;
+}
+
+@media only screen and (max-width: 780px) {
+	.index-footer-main {
+		flex-direction: column;
+	}
 }
 
 .button {
 	display: inline-block;
 	min-width: fit-content;
 	background: rgb(88, 86, 88);
-	color: rgb(8, 8, 8);
 	padding: 5px 10px;
 	text-decoration: none;
 	border-radius: 10px;
@@ -279,16 +328,19 @@ h4 {
 /*LINKOVI*/
 
 /* unvisited link */
-a.link {
+a:link {
 	color: #5adae0;
+	text-decoration: none;
 }
 /* visited link */
 a:visited {
 	color: rgb(223, 43, 166);
+	text-decoration: none;
 }
 /* mouse over link */
 a:hover {
 	color: rgb(11, 224, 82);
+	text-decoration: none;
 }
 
 /*TABLICE*/
