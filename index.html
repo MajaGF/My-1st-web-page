@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html id="index-page-bg" lang="hr-HR">
+<html class="index-page-bg" lang="hr-HR">
 	<head>
 		<meta charset="utf-8" />
 		<title>Moja prva web stranica</title>
@@ -16,23 +16,24 @@
 	</head>
 
 	<body>
-		<header>
-			<h1 title="HTML-CSS">HTML &amp; CSS</h1>
-
+		<header class="nav-list-index-header">
+			<img class="logo-index" src="/images/logo_manji.png" alt="logo" />
 			<nav>
-				<ul class="nav-list">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About us</a></li>
-					<li><a href="#">Information</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Contact</a></li>
+				<ul class="nav-list-index">
+					<li class="nav-list-index nav-links"><a href="#">Home</a></li>
+					<li class="nav-list-index nav-links"><a href="#">O nama</a></li>
+					<li class="nav-list-index nav-links"><a href="#">Blog</a></li>
 				</ul>
 			</nav>
+
+			<a href="#"><button class="index-button">Contact</button></a>
 		</header>
 		<!-- <img src="images/html-css.jpg" alt="Foto html css" class="responsive" /> -->
 		<!-- shortcut za ovu oznaku preko tipkovnice je SHIFT+ALT+A-->
 
 		<main>
+			<h1 title="HTML-CSS">HTML &amp; CSS</h1>
+
 			<div class="grid-index-column">
 				<div class="index-column1">
 					<p>
@@ -128,9 +129,8 @@
 					</div>
 
 					<div class="index-footer-columns">
-						<a
-							href="https://unsplash.com/@quincoetzee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-							><em>Background photo by Quinton Coetzee</em></a
+						<a href="https://mycolor.space/"
+							><em>background color gradient - My Color Space</em></a
 						>
 						<a
 							href="https://www.flaticon.com/free-icons/html"

@@ -1,10 +1,4 @@
-/* 	bold text pisati sa <strong>
-	italic text pisati s <em>
-	jer ih browseri bolje ističu ako se mijenja izgled stranice zbog raznih disability	*/
-
-/* &lt; stands for the less-than sign: <
-&gt; stands for the greater-than sign: >
-*/
+/*----------------FONTOVI----------------------*/
 
 @font-face {
 	font-family: "Itim", sans-serif;
@@ -53,24 +47,26 @@
 	font-style: normal;
 }
 
-/*html {
-	color-scheme: dark light;
-	height: 100%;
-}*/
-
-/*BACKGROUND SLIKE*/
-#index-page-bg {
-	background: url(/images/tipkovnica-crna-pozadina.jpg);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+/*-----------------POZADINE STRANICA-----------------------*/
+.index-page-bg {
+	background-image: linear-gradient(
+		to right top,
+		#e0c7d5,
+		#d8b7d3,
+		#caa9d4,
+		#b69ed7,
+		#9994db,
+		#809ae4,
+		#5e9fea,
+		#24a5ec,
+		#00b6ed,
+		#00c6e8,
+		#3dd4e1,
+		#69e1d9
+	);
 }
 
-#images-page-bg {
+.images-page-bg {
 	background-image: linear-gradient(
 		#d16ba5,
 		#c777b9,
@@ -85,15 +81,31 @@
 		#46eefa,
 		#5ffbf1
 	);
-	/*background: url(/images/tamna_yousef-espanioly-NmbmyVCZuPY-unsplash.jpg);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;*/
 }
+
+.htmlstruktura-page-bg {
+	background-image: linear-gradient(
+		to left top,
+		#d7c4e3,
+		#cab6e3,
+		#b9aae4,
+		#a49ee6,
+		#8994e8,
+		#6f9bef,
+		#4ea1f3,
+		#04a7f5,
+		#00bbf4,
+		#3dcdef,
+		#6cddea,
+		#97ece7
+	);
+}
+
+.logo {
+	font-size: 12px;
+}
+
+/*-----------------HEADER, BODY, MAIN, FOOTER-----------------------*/
 
 *,
 *::before,
@@ -101,26 +113,125 @@
 	box-sizing: border-box;
 }
 
-header {
-	background-color: rgb(235, 249, 249);
-	text-align: center;
-	margin-bottom: 30px;
-}
-
-.nav-list {
+/*----------------INDEX PAGE NAV BAR----------------------------*/
+.nav-list-index-header {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 5px 10%;
+	background-image: linear-gradient(
+		to right bottom,
+		#5696f2,
+		#95a1f1,
+		#bdafee,
+		#d9c0ed,
+		#ecd4ee
+	);
 	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.nav-list li {
-	flex-grow: 1;
-	flex-shrink: 1;
+.nav-list-index {
+	font-family: "Playfair Display scblack", sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	color: rgb(19, 18, 18);
+	text-decoration: none;
 }
+
+.nav-links {
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	padding: 0 20px;
+	color: rgb(19, 18, 18);
+	text-decoration: none;
+}
+
+.nav-links a:link {
+	color: rgb(138, 68, 235);
+	text-decoration: none;
+}
+
+.nav-links a:hover {
+	color: rgb(191, 68, 235);
+}
+
+.logo-index {
+	cursor: pointer;
+}
+
+.index-button {
+	font-family: "Playfair Display scblack", sans-serif;
+	padding: 9px 25px;
+	background-color: #b3dae6;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.index-button:hover {
+	background-color: #f57ac4;
+}
+
+/*----------------HTML STRUKTURA PAGE NAV BAR----------------------------*/
+.nav-list-htmlstruktura-header {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 5px 10%;
+	background-image: linear-gradient(
+		to right bottom,
+		#5696f2,
+		#95a1f1,
+		#bdafee,
+		#d9c0ed,
+		#ecd4ee
+	);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.logo-htmlstruktura {
+	cursor: pointer;
+	margin-right: auto;
+}
+
+.htmlstruktura-button {
+	font-family: "Playfair Display scblack", sans-serif;
+	padding: 9px 25px;
+	margin-left: 50px;
+	background-color: #b3dae6;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.index-button:hover {
+	background-color: #f57ac4;
+}
+
+/*----------------SLIKE PAGE NAV BAR----------------------------*/
+.logo-slike {
+	cursor: pointer;
+	order: 3;
+	margin-left: auto;
+}
+
+.nav-slike {
+	order: 1;
+}
+
+.slike-link {
+	order: 2;
+}
+
+/*----------------END OF NAV----------------------------*/
 
 body {
-	font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
-	color: rgb(190, 185, 185);
+	font-family: "Roboto", sans-serif;
+	color: rgb(243, 243, 243);
 	margin: 0;
 	font-size: 18px;
 	display: flex;
@@ -174,8 +285,7 @@ main {
 }
 
 footer {
-	background-color: #0a3c52;
-	color: rgb(253, 253, 253);
+	background-color: rgb(184, 183, 237);
 	padding: 1rem;
 }
 
@@ -185,7 +295,7 @@ footer a {
 }
 
 footer a:hover {
-	color: rgb(134, 131, 131);
+	color: rgb(204, 203, 233);
 	text-decoration: none;
 }
 
@@ -196,7 +306,7 @@ footer a:hover {
 
 .index-footer-main {
 	display: flex;
-	margin-bottom: 1rem;
+	margin-bottom: rem;
 }
 
 .index-footer-columns {
@@ -225,7 +335,7 @@ footer a:hover {
 .index-footer-social {
 	font-size: 20px;
 	margin-left: 1.5rem;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 footer .fa-brands {
 	color: lightblue;
@@ -236,7 +346,7 @@ footer .fa-brands:hover {
 	transition: color 0.3s;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 400px) {
 	.index-footer-main {
 		flex-direction: column;
 	}
@@ -263,16 +373,21 @@ ul li {
 	color: rgb(232, 55, 152);
 }
 
+/*-----------------H & P-----------------------*/
+
 h1 {
 	font-family: "Playfair Display scblack", serif;
-	color: #c96242;
+	color: #060606;
+	text-shadow: 2px 3px 0px #767689;
 	text-align: center;
+	font-size: 50px;
 }
 
 h2 {
 	font-family: "Itim ";
-	color: rgb(227, 240, 52);
-	font-size: 20px;
+	color: rgb(217, 244, 174);
+	text-shadow: 2px 3px 0px #767689;
+	font-size: 28px;
 }
 h3 {
 	color: rgb(247, 247, 248);
@@ -282,7 +397,7 @@ h4 {
 	color: rgb(63, 61, 67);
 }
 
-/*BOX MODEL NA STRANICI CSSBOXMODEL*/
+/*---------------------BOX MODEL NA STRANICI CSSBOXMODEL----------------------------*/
 /* the CSS BOX MODEL - slaže se po sljedećem redu:
 	margin:
 	border:
@@ -325,25 +440,25 @@ h4 {
 	width: fit-content;
 }
 
-/*LINKOVI*/
+/*----------------------------LINKOVI----------------------------*/
 
 /* unvisited link */
-a:link {
+/*a:link {
 	color: #5adae0;
 	text-decoration: none;
 }
 /* visited link */
-a:visited {
+/*a:visited {
 	color: rgb(223, 43, 166);
 	text-decoration: none;
 }
 /* mouse over link */
-a:hover {
+/*a:hover {
 	color: rgb(11, 224, 82);
 	text-decoration: none;
 }
 
-/*TABLICE*/
+/*--------------------------TABLICE---------------------------------*/
 /*TABLICA NA STRANICI ELEMENTI*/
 
 .table-elementi table {
@@ -443,12 +558,14 @@ a:hover {
 	text-align: center;
 }
 
+/*------------------------------- END TABLICE------------------------*/
+
 /*list-none {
 	list-style: "♠";
 	list-style-position: outside !important;
 }*/
 
-/* MIJENJANJE OZNAKE LISTE*/
+/*---------------------------------LISTE-----------------------------*/
 .list-spade {
 	list-style-type: none;
 	margin-left: 0;
@@ -465,7 +582,7 @@ a:hover {
 	text-align: center;
 }
 
-/*GRID U TABLICE*/
+/*-----------------------GRID U TABLICE---------------------------*/
 .column-tablice {
 	display: grid;
 	gap: 5px;
