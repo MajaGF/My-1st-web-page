@@ -256,7 +256,7 @@ main {
 .index-column1 {
 	grid-column: span 2;
 	text-align: left;
-	padding-bottom: 3remrem;
+	padding-bottom: 3rem;
 }
 
 .index-column2 {
