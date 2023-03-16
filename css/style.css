@@ -101,10 +101,6 @@
 	);
 }
 
-.logo {
-	font-size: 12px;
-}
-
 /*-----------------HEADER, BODY, MAIN, FOOTER-----------------------*/
 
 *,
@@ -114,68 +110,8 @@
 }
 
 /*----------------INDEX PAGE NAV BAR----------------------------*/
+
 .nav-list-index-header {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 5px 10%;
-	background-image: linear-gradient(
-		to right bottom,
-		#5696f2,
-		#95a1f1,
-		#bdafee,
-		#d9c0ed,
-		#ecd4ee
-	);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.nav-list-index {
-	font-family: "Playfair Display scblack", sans-serif;
-	font-weight: 600;
-	font-size: 18px;
-	color: rgb(19, 18, 18);
-	text-decoration: none;
-}
-
-.nav-links {
-	display: inline-block;
-	transition: all 0.3s ease 0s;
-	padding: 0 20px;
-	color: rgb(19, 18, 18);
-	text-decoration: none;
-}
-
-.nav-links a:link {
-	color: rgb(138, 68, 235);
-	text-decoration: none;
-}
-
-.nav-links a:hover {
-	color: rgb(191, 68, 235);
-}
-
-.logo-index {
-	cursor: pointer;
-}
-
-.index-button {
-	font-family: "Playfair Display scblack", sans-serif;
-	padding: 9px 25px;
-	background-color: #b3dae6;
-	border: none;
-	border-radius: 50px;
-	cursor: pointer;
-	transition: all 0.3s ease 0s;
-}
-
-.index-button:hover {
-	background-color: #f57ac4;
-}
-
-/*----------------HTML STRUKTURA PAGE NAV BAR----------------------------*/
-.nav-list-htmlstruktura-header {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 5px 10%;
@@ -192,12 +128,62 @@
 	align-items: center;
 }
 
-.logo-htmlstruktura {
+@media only screen and (max-width: 500px) {
+	.nav-list-index-header {
+		padding: 5px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"logo"
+			"links"
+			"kontakt";
+	}
+	.logo-index {
+		grid-area: logo;
+		margin: auto;
+	}
+	.nav-links {
+		grid-area: links;
+		margin: auto;
+	}
+
+	.index-button {
+		grid-area: kontakt;
+	}
+}
+
+.nav-list-index {
+	font-family: "Roboto_Condensed", sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	color: rgb(19, 18, 18);
+	text-decoration: none;
+}
+
+.nav-links {
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	padding: 0 10px;
+	color: rgb(19, 18, 18);
+	text-decoration: none;
+}
+
+.nav-links a:link {
+	color: rgb(8, 6, 153);
+	text-decoration: none;
+}
+
+.nav-links a:hover {
+	color: rgb(68, 107, 235);
+}
+
+.logo-index {
 	cursor: pointer;
 	margin-right: auto;
 }
 
-.htmlstruktura-button {
+.index-button {
 	font-family: "Playfair Display scblack", sans-serif;
 	padding: 9px 25px;
 	margin-left: 50px;
@@ -212,27 +198,12 @@
 	background-color: #f57ac4;
 }
 
-/*----------------SLIKE PAGE NAV BAR----------------------------*/
-.logo-slike {
-	cursor: pointer;
-	order: 3;
-	margin-left: auto;
-}
-
-.nav-slike {
-	order: 1;
-}
-
-.slike-link {
-	order: 2;
-}
-
 /*----------------END OF NAV----------------------------*/
 
 body {
 	font-family: "Roboto", sans-serif;
 	color: rgb(243, 243, 243);
-	margin: 0;
+	margin: 0; /*zauzima cijeli prostor ekrana*/
 	font-size: 18px;
 	display: flex;
 	flex-direction: column;
@@ -244,12 +215,12 @@ main {
 	flex-grow: 1;
 }
 
-.grid-index-column {
+/*.grid-index-column {
 	display: grid;
 	gap: 1rem;
 	/*grid-template-columns: 1fr 1fr 1fr */
-	/*grid-template-columns: repeat(3, 1fr);*/
-	grid-template-columns: 20% 1fr 1fr;
+/*grid-template-columns: repeat(3, 1fr);*/
+/*grid-template-columns: 20% 1fr 1fr;
 	margin: 20px;
 }
 
@@ -282,8 +253,9 @@ main {
 	grid-column-start: 1;
 	grid-row-start: 1;
 	grid-row-end: 3;
-}
+}*/
 
+/*--------------FOOTER--------------*/
 footer {
 	background-color: rgb(184, 183, 237);
 	padding: 1rem;
@@ -306,7 +278,7 @@ footer a:hover {
 
 .index-footer-main {
 	display: flex;
-	margin-bottom: rem;
+	margin-bottom: 1rem;
 }
 
 .index-footer-columns {
@@ -338,11 +310,11 @@ footer a:hover {
 	padding-bottom: 5px;
 }
 footer .fa-brands {
-	color: lightblue;
+	color: rgb(8, 17, 143);
 }
 
 footer .fa-brands:hover {
-	color: rgb(8, 4, 135);
+	color: rgb(51, 45, 208);
 	transition: color 0.3s;
 }
 
@@ -352,6 +324,7 @@ footer .fa-brands:hover {
 	}
 }
 
+/*---------------------- END OF FOOTER-----------------------*/
 .button {
 	display: inline-block;
 	min-width: fit-content;
