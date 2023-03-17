@@ -1,3 +1,11 @@
+/*-----------------HEADER, BODY, MAIN, FOOTER-----------------------*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 /*----------------FONTOVI----------------------*/
 
 @font-face {
@@ -101,14 +109,6 @@
 	);
 }
 
-/*-----------------HEADER, BODY, MAIN, FOOTER-----------------------*/
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
 /*----------------INDEX PAGE NAV BAR----------------------------*/
 
 .nav-list-index-header {
@@ -126,31 +126,7 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-}
-
-@media only screen and (max-width: 500px) {
-	.nav-list-index-header {
-		padding: 5px;
-		margin: auto;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-areas:
-			"logo"
-			"links"
-			"kontakt";
-	}
-	.logo-index {
-		grid-area: logo;
-		margin: auto;
-	}
-	.nav-links {
-		grid-area: links;
-		margin: auto;
-	}
-
-	.index-button {
-		grid-area: kontakt;
-	}
+	flex-wrap: wrap;
 }
 
 .nav-list-index {
@@ -212,6 +188,7 @@ body {
 
 main {
 	padding: 1rem;
+	flex: 1;
 	flex-grow: 1;
 }
 
@@ -258,7 +235,7 @@ main {
 /*--------------FOOTER--------------*/
 footer {
 	background-color: rgb(184, 183, 237);
-	padding: 1rem;
+	padding: 10px;
 }
 
 footer a {
@@ -278,14 +255,19 @@ footer a:hover {
 
 .index-footer-main {
 	display: flex;
+	flex-wrap: wrap;
 	margin-bottom: 1rem;
 }
 
-.index-footer-columns {
-	flex-basis: 200px;
+.index-footer-columns:nth-child(1) {
 	flex-grow: 1;
 	text-align: center;
 	font-size: 12px;
+}
+.index-footer-columns {
+	flex-grow: 1;
+	text-align: center;
+	font-size: 10px;
 }
 
 .index-footer-link {
@@ -305,20 +287,21 @@ footer a:hover {
 }
 
 .index-footer-social {
-	font-size: 20px;
+	display: none;
+	/*font-size: 20px;
 	margin-left: 1.5rem;
-	padding-bottom: 5px;
+	padding-bottom: 5px;*/
 }
-footer .fa-brands {
+/*footer .fa-brands {
 	color: rgb(8, 17, 143);
 }
 
 footer .fa-brands:hover {
 	color: rgb(51, 45, 208);
 	transition: color 0.3s;
-}
+}*/
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 1000px) {
 	.index-footer-main {
 		flex-direction: column;
 	}
