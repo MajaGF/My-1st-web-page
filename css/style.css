@@ -116,6 +116,12 @@
 	gap: 1rem;
 }
 
+@media only screen and (max-width: 1000px) {
+	.grid-index-columns {
+		display: flex;
+		flex-direction: column;
+	}
+}
 .grid-index-column {
 	padding: 10px;
 }
@@ -130,17 +136,13 @@
 	grid-row: 1;
 }
 
-.h2-center {
-	text-align: center;
-}
-
 .tekst-u-krugu-1 {
-	font-size: 40px;
+	font-size: 30px;
 	text-align: center;
 	background-color: #f43bcf;
 	padding: 15px 0;
-	width: 4vw;
-	height: 4vw;
+	width: 2em;
+	height: 2em;
 	border-radius: 50%;
 	grid-column: 2 / 3;
 	grid-row: 1;
@@ -148,12 +150,12 @@
 }
 
 .tekst-u-krugu-2 {
-	font-size: 40px;
+	font-size: 30px;
 	text-align: center;
 	background-color: #f43bcf;
 	padding: 15px 0;
-	width: 4vw;
-	height: 4vw;
+	width: 2em;
+	height: 2em;
 	border-radius: 50%;
 	grid-column: 4 / 5;
 	grid-row: 1;
@@ -191,21 +193,12 @@ htmlstruktura-page-bg::after {
 	gap: 10rem;
 }
 
-.images-page-bg {
-	background-image: linear-gradient(
-		#d16ba5,
-		#c777b9,
-		#ba83ca,
-		#aa8fd8,
-		#9a9ae1,
-		#8aa7ec,
-		#79b3f4,
-		#69bff8,
-		#52cffe,
-		#41dfff,
-		#46eefa,
-		#5ffbf1
-	);
+@media only screen and (max-width: 1400px) {
+	.grid-htmlstruktura-columns {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
 }
 
 /*----------------INDEX PAGE NAV BAR----------------------------*/
@@ -278,7 +271,7 @@ htmlstruktura-page-bg::after {
 
 body {
 	font-family: "lexendlight", sans-serif;
-	color: rgb(243, 243, 243);
+	color: rgb(5, 9, 82);
 	margin: 0; /*zauzima cijeli prostor ekrana*/
 	font-size: 18px;
 	display: flex;
@@ -354,7 +347,7 @@ ul li {
 }
 
 .text-visio-code {
-	color: rgb(232, 55, 152);
+	color: rgb(174, 13, 101);
 }
 
 /*-----------------H & P-----------------------*/
