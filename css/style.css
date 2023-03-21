@@ -4,6 +4,8 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 
 /*----------- h2 FONT ----------------*/
@@ -82,6 +84,10 @@
 
 /*-------------- END OF FONTS -------------------*/
 
+html {
+	height: 100%;
+}
+
 /*----------------INDEX PAGE NAV BAR----------------------------*/
 
 .nav-list-index-header {
@@ -97,10 +103,11 @@
 		#ecd4ee
 	);
 	display: flex;
+	flex-grow: 1;
 	justify-content: flex-end;
 	align-items: center;
 	flex-wrap: wrap;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 
 .nav-list-index {
@@ -175,12 +182,11 @@
 	);
 	margin-left: calc(50% - 50vw);
 	margin-top: calc(50% - 50vw);
-	width: 100vw;
 	height: 100%;
 	padding: 30px;
 	display: block;
 	box-sizing: inherit;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 
 .index-page-bg::after {
@@ -260,12 +266,11 @@ htmlstruktura-page-bg::before {
 	margin-left: calc(50% - 50vw);
 	margin-top: -10px;
 	margin-bottom: auto;
-	width: 100vw;
 	height: 100%;
 	padding: 30px;
 	display: block;
 	box-sizing: inherit;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 
 htmlstruktura-page-bg::after {
@@ -302,19 +307,18 @@ htmlstruktura-page-bg::after {
 .css-struktura-page-bg {
 	background-color: cornflowerblue;
 	margin-left: calc(50% - 50vw);
-	margin-top: -10px;
-	margin-bottom: auto;
-	width: 100vw;
+	/*margin-top: -10px;*/
+	/*margin-bottom: auto;*/
 	height: 100%;
-	padding: 30px;
+	padding: 20px;
 	display: block;
 	box-sizing: inherit;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 
 .komentar {
 	font-family: "Itim";
-	font-size: 25px;
+	font-size: 1.5rem;
 	background-color: #e0c7d5;
 	max-width: fit-content;
 	color: rgb(174, 13, 101);
@@ -335,7 +339,11 @@ htmlstruktura-page-bg::after {
 	margin: 0 80px 0 40px;
 }
 
-@media only screen and (max-width: 1400px) {
+.css-blok-2 {
+	font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
 	.css-grid-columns {
 		display: flex;
 		flex-direction: column;
@@ -357,15 +365,20 @@ body {
 }
 
 main {
-	padding: 1rem;
+	/*padding: 1rem;*/
 	flex: 1;
-	flex-grow: 1;
+}
+
+/*------------ IMAGES FOR RESPONSIVE WEB -------------*/
+img {
+	height: auto;
+	max-width: 100%;
 }
 
 /*--------------FOOTER--------------*/
 footer {
 	background-color: rgb(184, 183, 237);
-	padding: 10px;
+	margin: 0;
 }
 
 footer a {
@@ -381,10 +394,12 @@ footer a:hover {
 .index-footer-container {
 	max-width: 1200px;
 	margin: 0 auto;
+	padding: 10px 0 10px 0;
 }
 
 .index-footer-main {
 	display: flex;
+	flex-grow: 1;
 	flex-wrap: wrap;
 	margin-bottom: 1rem;
 }
@@ -403,6 +418,13 @@ footer a:hover {
 	.index-footer-main {
 		flex-direction: column;
 	}
+}
+
+.containter-wrapp {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -20px; /* the bottom margin is the negative value of the footer's height */
 }
 
 /*---------------------- END OF FOOTER-----------------------*/
@@ -434,14 +456,14 @@ h1 {
 	color: #060606;
 	text-shadow: 2px 3px 0px #767689;
 	text-align: center;
-	font-size: 40px;
+	font-size: 3rem;
 }
 
 h2 {
 	font-family: "Itim ";
 	color: rgb(217, 244, 174);
 	text-shadow: 2px 3px 0px #767689;
-	font-size: 28px;
+	font-size: 1.8rem;
 }
 h3 {
 	color: rgb(247, 247, 248);
@@ -449,6 +471,24 @@ h3 {
 
 h4 {
 	color: rgb(63, 61, 67);
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		font-size: smaller;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	h2 {
+		font-size: 1rem;
+	}
+
+	.komentar {
+		font-size: 1rem;
+	}
 }
 
 /*---------------------BOX MODEL NA STRANICI CSSBOXMODEL----------------------------*/
