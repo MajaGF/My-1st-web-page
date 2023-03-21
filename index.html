@@ -4,15 +4,15 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Moja prva web stranica</title>
-		<link href="favicon.ico" rel="icon" />
+		<link href="Seanau-Kungfu-Panda-Panda.96.png" rel="icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="HTML, CSS" />
 		<meta name="keywords" content="html, css" />
 		<meta name="Author" content="MGF" />
+		<link rel="stylesheet" href="css/style.css" />
 		<script
 			src="https://kit.fontawesome.com/38c8da1da7.js"
 			crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="css/style.css" />
 	</head>
 
 	<body>
@@ -37,13 +37,11 @@
 
 			<a href="#"><button class="index-button">Kontakt</button></a>
 		</header>
-		<!-- <img src="images/html-css.jpg" alt="Foto html css" class="responsive" /> -->
-		<!-- shortcut za ovu oznaku preko tipkovnice je SHIFT+ALT+A-->
 
 		<main>
 			<div class="index-page-bg">
 				<h1 title="HTML-CSS">HTML &amp; CSS</h1>
-
+				<p class="p-podsjetnik">Osmišljeno kao podsjetnik / skripta</p>
 				<div class="grid-index-columns">
 					<div class="grid-index-column">
 						<h2>Što je HTML?</h2>
@@ -140,9 +138,114 @@
 							<span class="text-visio-code">&lt;/body&gt;</span> i
 							<span class="text-visio-code">&lt;/html&gt;</span>
 						</p>
+						<br />
+						<p class="centrirano">HTML komentari se ne prikazuju u pregledniku</p>
+
+						<p class="centrirano">
+							pišu se
+							<span class="komentar"> <strong> &lt;!-- ....... --&gt;</strong></span>
+						</p>
 					</div>
 					<div class="grid-htmlstruktura-column">
-						<img src="/images/html-struktura-printscreen.jpg" alt="html struktura" />
+						<div class="image-html">
+							<img src="/images/html-struktura-printscreen.jpg" alt="html struktura" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<!----------CSS STRUKTURA--------------->
+			<div class="css-struktura-page-bg">
+				<h1 title="CSS STRUKTURA">CSS STRUKTURA</h1>
+				<div class="css-grid-columns">
+					<div class="css-blok-1">
+						<br />
+						<p class="centrirano">
+							CSS deklaracije odvojene su točkom i zarezom, a blokovi deklaracija
+							okruženi su vitičastim zagradama
+						</p>
+						<div class="image-css">
+							<img src="/images/CSS-Syntax.jpg" alt="CSS Syntax" />
+						</div>
+						<p class="centrirano">
+							CSS komentari se ne prikazuju u pregledniku, ali mogu pomoći u
+							dokumentiranju izvornog koda
+						</p>
+
+						<p class="centrirano">
+							pišu se kao
+							<span class="komentar"> <strong> &#47;* ....... *&#47;</strong></span>
+						</p>
+					</div>
+					<div class="css-blok-2">
+						<ul>
+							<li>
+								<u>CSS Selectors</u>: .class; #id; element.class; element; *
+								<em>(kada želimo označiti sve elemente)</em> element, element, element
+								<em>(nabrajanje više elemenata)</em>; ...
+							</li>
+							<li>
+								<u>BACKGROUND PROPERTIES</u>: background-color; background-image;
+								background-repeat; background-position; backgroud; ...
+							</li>
+							<li>
+								<u>BORDER PROPERTIES</u>: border-style, border-width, border-color...
+							</li>
+							<li>
+								<u>CSS OUTLINE</u> (linija IZVAN html bordera!): outline-style;
+								outline-color; outline-width; outline-offset ...
+							</li>
+							<li>
+								<u>CSS FONTS</u>: font-family; font-style; font-weight; font-variant;
+								font-size; ...
+							</li>
+							<li>
+								<u>CSS LINKS</u>:
+								<ul>
+									<li>a:link - a normal, unvisited link</li>
+									<li>a:visited - a link the user has visited</li>
+									<li>a:hover - a link when the user mouses over it</li>
+									<li>a:active - a link the moment it is clicked</li>
+									<li>
+										text-decoration property - mostly used to remove underlines from links
+									</li>
+									<li>
+										background-color property - used to specify a background color for
+										links
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<u>CSS LISTS</u>:
+								<ul>
+									<li>
+										unordered lists (&lt;ul&gt;) - the list items are marked with bullets
+									</li>
+									<li>
+										ordered lists (&lt;ol&gt;) - the list items are marked with numbers or
+										letters
+									</li>
+									<li>
+										list-style-type: circle | square | upper-roman | lower-alpha | none;
+									</li>
+									<li>list-style-image: url(“xx.gif”);</li>
+									<li>list-style-position: outside (default) | inside;</li>
+								</ul>
+							</li>
+							<li>
+								<u>HTML &lt;pre&gt; Tag</u> - Text in a &lt;pre&gt; element is displayed
+								in a fixed-width font, and the text preserves both spaces and line
+								breaks. The text will be displayed exactly as written in the HTML source
+								code.
+							</li>
+							<li><u> BOX MODEL</u> - width + border + padding + margin</li>
+							<li><u>MARGIN PROPERTIES</u> - “prostor” izvan box-a!</li>
+							<li><u>CSS PADDING</u> - stvaranje “mjesta” oko elemenata!</li>
+							<li>
+								<strong><u>SHORTHAND PROPERTIES</u></strong> - nabrajanje bez zareza!
+								uvijek redom: gore desno dolje lijevo
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>

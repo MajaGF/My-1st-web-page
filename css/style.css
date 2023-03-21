@@ -6,8 +6,7 @@
 	box-sizing: border-box;
 }
 
-/*----------------FONTOVI----------------------*/
-
+/*----------- h2 FONT ----------------*/
 @font-face {
 	font-family: "Itim", sans-serif;
 	src: local("Itim"), url("/fonts/Itim/itim-regular-webfont.eot"),
@@ -39,6 +38,7 @@
 	font-style: normal;
 }
 
+/*---------NAV LIST INDEX FONT-----------*/
 @font-face {
 	font-family: "Roboto_Condensed";
 	src: url("/fonts/Roboto/robotocondensed-regular-webfont.woff2") format("woff2"),
@@ -71,7 +71,86 @@
 	font-style: normal;
 }
 
-/*-----------------POZADINE STRANICA-----------------------*/
+/*---- BODY FONT------*/
+@font-face {
+	font-family: "lexendregular";
+	src: url("lexend-regular-webfont.woff2") format("woff2"),
+		url("lexend-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*-------------- END OF FONTS -------------------*/
+
+/*----------------INDEX PAGE NAV BAR----------------------------*/
+
+.nav-list-index-header {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 5px 10%;
+	background-image: linear-gradient(
+		to right bottom,
+		#5696f2,
+		#95a1f1,
+		#bdafee,
+		#d9c0ed,
+		#ecd4ee
+	);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-wrap: wrap;
+	overflow: auto;
+}
+
+.nav-list-index {
+	font-family: "Roboto_Condensed", sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	color: rgb(19, 18, 18);
+	text-decoration: none;
+}
+
+.nav-links {
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	padding: 0 10px;
+	color: rgb(19, 18, 18);
+	text-decoration: none;
+}
+
+.nav-links a:link {
+	color: rgb(8, 6, 153);
+	text-decoration: none;
+}
+
+.nav-links a:hover {
+	color: rgb(68, 107, 235);
+}
+
+.logo-index {
+	cursor: pointer;
+	margin-right: auto;
+}
+
+.index-button {
+	font-family: "Playfair Display scblack", sans-serif;
+	padding: 9px 25px;
+	margin-left: 50px;
+	background-color: #b3dae6;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.index-button:hover {
+	background-color: #f57ac4;
+}
+
+/*----------------END OF NAV----------------------------*/
+
+/*-------INDEX PAGE SECTION 1 ---------------*/
 .index-page-bg::before {
 	content: "";
 	display: table;
@@ -162,6 +241,14 @@
 	justify-self: center;
 }
 
+.p-podsjetnik {
+	text-align: center;
+	font-family: "Playfair Display scblack";
+	color: #e3d5d5;
+}
+
+/*------- INDEX PAGE SECTION 2 (HTML STRUKTURA) ---------------*/
+
 htmlstruktura-page-bg::before {
 	content: "";
 	display: table;
@@ -198,79 +285,69 @@ htmlstruktura-page-bg::after {
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		align-items: center;
+	}
+
+	.image-html {
+		display: inline-block;
+	}
+
+	.image-html-1 {
+		width: 80%;
 	}
 }
 
-/*----------------INDEX PAGE NAV BAR----------------------------*/
+/*------- INDEX PAGE SECTION 3 (CSS STRUKTURA) ---------------*/
 
-.nav-list-index-header {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 5px 10%;
-	background-image: linear-gradient(
-		to right bottom,
-		#5696f2,
-		#95a1f1,
-		#bdafee,
-		#d9c0ed,
-		#ecd4ee
-	);
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	flex-wrap: wrap;
+.css-struktura-page-bg {
+	background-color: cornflowerblue;
+	margin-left: calc(50% - 50vw);
+	margin-top: -10px;
+	margin-bottom: auto;
+	width: 100vw;
+	height: 100%;
+	padding: 30px;
+	display: block;
+	box-sizing: inherit;
 	overflow: auto;
 }
 
-.nav-list-index {
-	font-family: "Roboto_Condensed", sans-serif;
-	font-weight: 600;
-	font-size: 18px;
-	color: rgb(19, 18, 18);
-	text-decoration: none;
+.komentar {
+	font-family: "Itim";
+	font-size: 25px;
+	background-color: #e0c7d5;
+	max-width: fit-content;
+	color: rgb(174, 13, 101);
 }
 
-.nav-links {
-	display: inline-block;
-	transition: all 0.3s ease 0s;
-	padding: 0 10px;
-	color: rgb(19, 18, 18);
-	text-decoration: none;
+.centrirano {
+	text-align: center;
 }
 
-.nav-links a:link {
-	color: rgb(8, 6, 153);
-	text-decoration: none;
+.image-css {
+	text-align: center;
 }
 
-.nav-links a:hover {
-	color: rgb(68, 107, 235);
+.css-grid-columns {
+	display: grid;
+	grid-template-columns: 40% 1fr;
+	gap: 1rem;
+	margin: 0 80px 0 40px;
 }
 
-.logo-index {
-	cursor: pointer;
-	margin-right: auto;
+@media only screen and (max-width: 1400px) {
+	.css-grid-columns {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin: 0;
+		padding: 0;
+	}
 }
 
-.index-button {
-	font-family: "Playfair Display scblack", sans-serif;
-	padding: 9px 25px;
-	margin-left: 50px;
-	background-color: #b3dae6;
-	border: none;
-	border-radius: 50px;
-	cursor: pointer;
-	transition: all 0.3s ease 0s;
-}
-
-.index-button:hover {
-	background-color: #f57ac4;
-}
-
-/*----------------END OF NAV----------------------------*/
-
+/*---------------------*/
 body {
-	font-family: "lexendlight", sans-serif;
+	font-family: "lexendregular", sans-serif;
 	color: rgb(5, 9, 82);
 	margin: 0; /*zauzima cijeli prostor ekrana*/
 	font-size: 18px;
@@ -297,7 +374,7 @@ footer a {
 }
 
 footer a:hover {
-	color: rgb(204, 203, 233);
+	color: rgb(234, 41, 224);
 	text-decoration: none;
 }
 
