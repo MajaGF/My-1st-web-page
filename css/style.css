@@ -86,6 +86,7 @@
 
 html {
 	height: 100%;
+	scroll-behavior: smooth;
 }
 
 /*----------------INDEX PAGE NAV BAR----------------------------*/
@@ -206,7 +207,16 @@ html {
 		display: flex;
 		flex-direction: column;
 	}
+
+	.tekst-u-krugu-1 {
+		display: none;
+	}
+
+	.tekst-u-krugu-2 {
+		display: none;
+	}
 }
+
 .grid-index-column {
 	padding: 10px;
 }
@@ -336,7 +346,7 @@ htmlstruktura-page-bg::after {
 	display: grid;
 	grid-template-columns: 40% 1fr;
 	gap: 1rem;
-	margin: 0 80px 0 40px;
+	margin: 0 30px 0 30px;
 }
 
 .css-blok-2 {
@@ -424,7 +434,7 @@ footer a:hover {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -20px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto -25px; /* the bottom margin is the negative value of the footer's height */
 }
 
 /*---------------------- END OF FOOTER-----------------------*/
@@ -457,6 +467,8 @@ h1 {
 	text-shadow: 2px 3px 0px #767689;
 	text-align: center;
 	font-size: 3rem;
+	margin-bottom: 20px;
+	letter-spacing: 0.2rem;
 }
 
 h2 {
@@ -489,6 +501,111 @@ h4 {
 	.komentar {
 		font-size: 1rem;
 	}
+}
+
+/*----------- ELEMENTI HTML-a STRANICA -------------*/
+
+.elementi-page-bg {
+	background-color: #004e71;
+	margin-left: calc(50% - 50vw);
+	height: 100%;
+	padding: 30px;
+	display: block;
+	box-sizing: inherit;
+	color: #cbf7ff;
+}
+
+.nav-list-elementi {
+	box-sizing: border-box;
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+table {
+	border-collapse: collapse;
+	border: solid rgb(119, 220, 202);
+	font-family: "lexendlight", sans-serif;
+	font-size: 1rem;
+	box-shadow: 15px 8px 10px #354d3d;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.table-elementi caption {
+	caption-side: top;
+	font-family: "Playfair Display italic";
+	font-size: 1.2rem;
+}
+
+.table-elementi thead {
+	background-color: #a0d4fe;
+	color: #fff;
+	padding: 5px;
+}
+
+.table-elementi tbody {
+	background-color: #d6dedc;
+}
+
+.table-elementi td,
+.table-elementi th {
+	border: 1px solid #e1f8d4;
+	padding: 10px;
+	text-align: center;
+	color: #004e71;
+}
+
+.h1-dark {
+	color: #a0d4fe;
+	text-shadow: none;
+	letter-spacing: 0.2rem;
+}
+.text-visio-code-dark {
+	color: #d684ef;
+}
+@media only screen and (max-width: 700px) {
+	body {
+		font-size: smaller;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+	}
+	table {
+		font-size: smaller;
+	}
+	.table-elementi caption {
+		font-size: 0.8rem;
+	}
+}
+
+/*----------- ATRIBUTI HTML-a STRANICA -------------*/
+
+.atributi-page-bg {
+	background-color: #fff7d6;
+	margin-left: calc(50% - 50vw);
+	height: 100%;
+	padding: 30px;
+	display: block;
+	box-sizing: inherit;
+	color: #bd5942;
+}
+
+.nav-list-atributi {
+	box-sizing: border-box;
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.h2-dark {
+	color: #4a4737;
+	text-shadow: none;
 }
 
 /*---------------------BOX MODEL NA STRANICI CSSBOXMODEL----------------------------*/
@@ -552,39 +669,6 @@ h4 {
 	text-decoration: none;
 }
 
-/*--------------------------TABLICE---------------------------------*/
-/*TABLICA NA STRANICI ELEMENTI*/
-
-.table-elementi table {
-	border-collapse: collapse;
-	border: solid rgb(200, 200, 200);
-	border-radius: 5px;
-	letter-spacing: 1px;
-	font-family: sans-serif;
-	font-size: 14px;
-}
-
-.table-elementi caption {
-	padding: 10px;
-	caption-side: top;
-}
-
-.table-elementi thead {
-	background-color: #0a3c52;
-	color: #fff;
-	padding: 15px 10px;
-}
-
-.table-elementi tbody {
-	background-color: #1f5f2f;
-}
-
-.table-elementi td,
-.table-elementi th {
-	border: 1px solid rgb(190, 190, 190);
-	padding: 15px 30px;
-	text-align: center;
-}
 
 /*TABLICA NA STRANICI TABLICA-PRIMJER*/
 
