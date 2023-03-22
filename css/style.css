@@ -108,7 +108,6 @@ html {
 	justify-content: flex-end;
 	align-items: center;
 	flex-wrap: wrap;
-	/*overflow: auto;*/
 }
 
 .nav-list-index {
@@ -311,6 +310,125 @@ htmlstruktura-page-bg::after {
 		width: 80%;
 	}
 }
+
+/*--------------- HAMBURGER ZA HTML --------------------*/
+
+.nav-html-link {
+	color: #060606;
+}
+
+.nav-bar-html {
+	background-color: red;
+	position: static;
+	width: 100%;
+	z-index: 3;
+}
+
+.nav-bar-html ul {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: rgb(0, 255, 42);
+}
+
+.nav-bar-html ul a {
+	display: block; /*linkovi po defaultu su inline-block (nemaju margine ni padding), postavljanjem block dajemo više mjesta za klikanje*/
+	padding: 10px;
+	text-decoration: none;
+	border-right: 1px solid grey; /*ovo se vidi kad nema hamburgera kao odvajanje linkova*/
+}
+
+.nav-bar-html ul a:hover {
+	background-color: #00b6ed;
+}
+
+.nav-html-list {
+	max-height: 0;
+	transition: max-height 0.2s ease-out; /*za smooth otvaranje hamburgera*/
+}
+
+/*stavljanje hamburgera u desnu stranu*/
+.nav-bar-html .menu-html-icon {
+	padding: 28px 20px;
+	position: relative;
+	float: right; /*POMAK HAMBURGERA U DESNO!*/
+	cursor: pointer;
+}
+
+.nav-bar-html .menu-html-icon .nav-html-icon {
+	background: white;
+	display: block;
+	height: 2px;
+	width: 30px;
+	position: relative;
+	transition: background 0.2s ease-out; /*za pretvaranje crtice u x*/
+}
+
+.nav-bar-html .menu-html-icon .nav-html-icon::before {
+	background: white;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute; /*postavlja pseudo element na isto mjesto kao element -*/
+	transition: all 0.2s ease-out;
+	top: 5px; /*pomiče pseudo element dolje i stvara novi -*/
+}
+
+.nav-bar-html .menu-html-icon .nav-html-icon::after {
+	background: white;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute; /*postavlja pseudo element na isto mjesto kao element -*/
+	transition: all 0.2s ease-out;
+	top: -5px; /*pomiče pseudo element iznad elementa i stvara novu -*/
+}
+
+.nav-bar-html .menu-html-btn {
+	display: none;
+}
+
+/* :checked oživljava klikanje na hamburger*/
+.nav-bar-html .menu-html-btn:checked ~ .nav-html-list {
+	max-height: 150px; /*promjena visine ul liste*/
+}
+
+.nav-bar-html .menu-html-btn:checked ~ .menu-html-icon .nav-html-icon {
+	background: transparent;
+}
+
+.nav-bar-html .menu-html-btn:checked ~ .menu-html-icon .nav-html-icon::before {
+	transform: rotate(-45deg);
+	top: 0;
+}
+
+.nav-bar-html .menu-html-btn:checked ~ .menu-html-icon .nav-html-icon::after {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+/*DHAMBURGER SE PRETVARA U LISTU*/
+/*@media (min-width: 1100px) {
+	.nav-bar-html li {
+		float: left;
+	}
+
+	.nav-bar-html li a {
+		padding: 20px 30px;
+	}
+
+	.nav-bar-html .nav-html-list {
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+
+	.nav-bar-html .menu-html-icon {
+		display: none;
+	}
+}*/
 
 /*------- INDEX PAGE SECTION 3 (CSS STRUKTURA) ---------------*/
 
