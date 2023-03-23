@@ -89,6 +89,94 @@ html {
 	scroll-behavior: smooth;
 }
 
+/*---------------------*/
+body {
+	font-family: "lexendregular", sans-serif;
+	color: rgb(5, 9, 82);
+	margin: 0; /*zauzima cijeli prostor ekrana*/
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	/*padding: 1rem;*/
+	flex: 1;
+}
+
+/*------------ IMAGES FOR RESPONSIVE WEB -------------*/
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+h1 {
+	font-family: "Playfair Display scblack", serif;
+	color: #060606;
+	text-shadow: 2px 3px 0px #767689;
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 20px;
+	letter-spacing: 0.2rem;
+}
+
+h2 {
+	font-family: "Itim ";
+	color: rgb(217, 244, 174);
+	text-shadow: 2px 3px 0px #767689;
+	font-size: 1.8rem;
+}
+h3 {
+	color: rgb(247, 247, 248);
+}
+
+h4 {
+	color: rgb(63, 61, 67);
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		font-size: smaller;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	h2 {
+		font-size: 1rem;
+	}
+}
+
+ul li {
+	list-style-type: none;
+}
+
+.text-visio-code {
+	color: rgb(174, 13, 101);
+}
+
+/*------------------STIL LINKOVA----------------------------*/
+
+/* unvisited link */
+/*a:link {
+	color: #5adae0;
+	text-decoration: none;
+}
+/* visited link */
+/*a:visited {
+	color: rgb(223, 43, 166);
+	text-decoration: none;
+}
+/* mouse over link */
+/*a:hover {
+	color: rgb(11, 224, 82);
+	text-decoration: none;
+}
+
+/*-----------------END OF STIL LINKOVA ---------------------*/
+
 /*----------------INDEX PAGE NAV BAR----------------------------*/
 
 .nav-list-index-header {
@@ -155,9 +243,9 @@ html {
 	background-color: #f57ac4;
 }
 
-/*----------------END OF NAV----------------------------*/
+/*----------------END OF INDEX PAGE NAV---------------------*/
 
-/*-------INDEX PAGE SECTION 1 ---------------*/
+/*----------------INDEX PAGE SECTION 1 ---------------------*/
 .index-page-bg::before {
 	content: "";
 	display: table;
@@ -262,7 +350,7 @@ html {
 	color: #e3d5d5;
 }
 
-/*------- INDEX PAGE SECTION 2 (HTML STRUKTURA) ---------------*/
+/*-------------- INDEX PAGE SECTION 2 (HTML STRUKTURA) ---------------*/
 
 htmlstruktura-page-bg::before {
 	content: "";
@@ -311,6 +399,10 @@ htmlstruktura-page-bg::after {
 	}
 }
 
+.komentar {
+	font-size: 1rem;
+}
+
 /*--------------- HAMBURGER ZA HTML --------------------*/
 
 .nav-html-link {
@@ -318,7 +410,7 @@ htmlstruktura-page-bg::after {
 }
 
 .nav-bar-html {
-	background-color: red;
+	background-color: #5cedba;
 	position: static;
 	width: 100%;
 	z-index: 3;
@@ -328,23 +420,27 @@ htmlstruktura-page-bg::after {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: rgb(0, 255, 42);
+	background-color: rgb(113, 178, 227);
 }
 
 .nav-bar-html ul a {
-	display: block; /*linkovi po defaultu su inline-block (nemaju margine ni padding), postavljanjem block dajemo više mjesta za klikanje*/
+	display: flex; /*linkovi po defaultu su inline-block (nemaju margine ni padding), postavljanjem block dajemo više mjesta za klikanje*/
+	justify-content: flex-end;
 	padding: 10px;
 	text-decoration: none;
-	border-right: 1px solid grey; /*ovo se vidi kad nema hamburgera kao odvajanje linkova*/
+	/*border-right: 1px solid grey;*/ /*ovo se vidi kad nema hamburgera kao odvajanje linkova*/
+	transition: all 10ms;
 }
 
 .nav-bar-html ul a:hover {
-	background-color: #00b6ed;
+	background-color: rgb(113, 178, 227);
+	font-size: 30px;
+	font-size-adjust: 100%;
 }
 
 .nav-html-list {
 	max-height: 0;
-	transition: max-height 0.2s ease-out; /*za smooth otvaranje hamburgera*/
+	transition: max-height 0.6s ease-out; /*za smooth otvaranje hamburgera*/
 }
 
 /*stavljanje hamburgera u desnu stranu*/
@@ -353,6 +449,7 @@ htmlstruktura-page-bg::after {
 	position: relative;
 	float: right; /*POMAK HAMBURGERA U DESNO!*/
 	cursor: pointer;
+	border: solid #a3c8ff;
 }
 
 .nav-bar-html .menu-html-icon .nav-html-icon {
@@ -361,7 +458,7 @@ htmlstruktura-page-bg::after {
 	height: 2px;
 	width: 30px;
 	position: relative;
-	transition: background 0.2s ease-out; /*za pretvaranje crtice u x*/
+	transition: background 0.6s ease-out; /*za pretvaranje crtice u x*/
 }
 
 .nav-bar-html .menu-html-icon .nav-html-icon::before {
@@ -409,7 +506,7 @@ htmlstruktura-page-bg::after {
 	top: 0;
 }
 
-/*DHAMBURGER SE PRETVARA U LISTU*/
+/*-------- HAMBURGER SE PRETVARA U LISTU ---------*/
 /*@media (min-width: 1100px) {
 	.nav-bar-html li {
 		float: left;
@@ -429,6 +526,64 @@ htmlstruktura-page-bg::after {
 		display: none;
 	}
 }*/
+
+/*------ LINKOVI s hover MIJENJAJU BOJU ----------*/
+
+.hvr-sweep-to-right {
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: linear-gradient(
+		to right,
+		#aaf791,
+		#62f1b6,
+		#00e5d8,
+		#00d6f0,
+		#34c4f8,
+		#4ac2f9,
+		#5bc1f9,
+		#69bff8,
+		#52cffe,
+		#41dfff,
+		#46eefa,
+		#5ffbf1
+	);
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover,
+.hvr-sweep-to-right:focus,
+.hvr-sweep-to-right:active {
+	color: rgb(17, 35, 122);
+}
+.hvr-sweep-to-right:hover:before,
+.hvr-sweep-to-right:focus:before,
+.hvr-sweep-to-right:active:before {
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
 
 /*------- INDEX PAGE SECTION 3 (CSS STRUKTURA) ---------------*/
 
@@ -481,29 +636,7 @@ htmlstruktura-page-bg::after {
 	}
 }
 
-/*---------------------*/
-body {
-	font-family: "lexendregular", sans-serif;
-	color: rgb(5, 9, 82);
-	margin: 0; /*zauzima cijeli prostor ekrana*/
-	font-size: 18px;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-main {
-	/*padding: 1rem;*/
-	flex: 1;
-}
-
-/*------------ IMAGES FOR RESPONSIVE WEB -------------*/
-img {
-	height: auto;
-	max-width: 100%;
-}
-
-/*--------------FOOTER--------------*/
+/*--------------FOOTER INDEX PAGE --------------*/
 footer {
 	background-color: rgb(184, 183, 237);
 	margin: 0;
@@ -550,76 +683,12 @@ footer a:hover {
 
 .containter-wrapp {
 	min-height: 100%;
-	height: auto !important;
-	height: 100%;
+	/*height: auto !important;
+	height: 100%;*/
 	margin: 0 auto -25px; /* the bottom margin is the negative value of the footer's height */
 }
 
-/*---------------------- END OF FOOTER-----------------------*/
-.button {
-	display: inline-block;
-	min-width: fit-content;
-	background: rgb(88, 86, 88);
-	padding: 5px 10px;
-	text-decoration: none;
-	border-radius: 10px;
-}
-
-ul li {
-	list-style-type: none;
-}
-.example {
-	background-color: rgb(143, 197, 244);
-	max-width: fit-content;
-}
-
-.text-visio-code {
-	color: rgb(174, 13, 101);
-}
-
-/*-----------------H & P-----------------------*/
-
-h1 {
-	font-family: "Playfair Display scblack", serif;
-	color: #060606;
-	text-shadow: 2px 3px 0px #767689;
-	text-align: center;
-	font-size: 3rem;
-	margin-bottom: 20px;
-	letter-spacing: 0.2rem;
-}
-
-h2 {
-	font-family: "Itim ";
-	color: rgb(217, 244, 174);
-	text-shadow: 2px 3px 0px #767689;
-	font-size: 1.8rem;
-}
-h3 {
-	color: rgb(247, 247, 248);
-}
-
-h4 {
-	color: rgb(63, 61, 67);
-}
-
-@media only screen and (max-width: 600px) {
-	body {
-		font-size: smaller;
-	}
-
-	h1 {
-		font-size: 1.5rem;
-	}
-
-	h2 {
-		font-size: 1rem;
-	}
-
-	.komentar {
-		font-size: 1rem;
-	}
-}
+/*---------------------- END OF FOOTER INDEX PAGE -----------------------*/
 
 /*----------- ELEMENTI HTML-a STRANICA -------------*/
 
@@ -637,9 +706,28 @@ h4 {
 	box-sizing: border-box;
 	display: flex;
 	flex-grow: 1;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	flex-wrap: wrap;
+}
+
+.logo-elementi {
+	margin-right: auto;
+}
+
+.elementi-button {
+	font-family: "Playfair Display scblack", sans-serif;
+	padding: 9px 25px;
+	margin-left: 50px;
+	background-color: #b3dae6;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.elementi-button:hover {
+	background-color: #f57ac4;
 }
 
 table {
@@ -769,26 +857,7 @@ table {
 	width: fit-content;
 }
 
-/*----------------------------LINKOVI----------------------------*/
-
-/* unvisited link */
-/*a:link {
-	color: #5adae0;
-	text-decoration: none;
-}
-/* visited link */
-/*a:visited {
-	color: rgb(223, 43, 166);
-	text-decoration: none;
-}
-/* mouse over link */
-/*a:hover {
-	color: rgb(11, 224, 82);
-	text-decoration: none;
-}
-
-
-/*TABLICA NA STRANICI TABLICA-PRIMJER*/
+/*-------------------- TABLICA NA STRANICI TABLICA-PRIMJER --------------*/
 
 .kratki-naziv-tablice table {
 	border-collapse: collapse;
@@ -828,7 +897,7 @@ table {
 	background-color: #ae1cda;
 }
 
-/*TABLICA NA STRANICI SIMBOLI ZNAKOVI*/
+/*------------------ TABLICA NA STRANICI SIMBOLI ZNAKOVI --------------------*/
 
 .table-simboli-znakovi table {
 	border-collapse: collapse;
@@ -856,12 +925,13 @@ table {
 
 /*------------------------------- END TABLICE------------------------*/
 
+/*---------------------------------LISTE-----------------------------*/
+
 /*list-none {
 	list-style: "♠";
 	list-style-position: outside !important;
 }*/
 
-/*---------------------------------LISTE-----------------------------*/
 .list-spade {
 	list-style-type: none;
 	margin-left: 0;
@@ -884,4 +954,19 @@ table {
 	gap: 5px;
 	grid-template-columns: 1fr 1fr 1fr;
 	border: solid red;
+}
+
+/*------------???? -------------------------*/
+.button {
+	display: inline-block;
+	min-width: fit-content;
+	background: rgb(88, 86, 88);
+	padding: 5px 10px;
+	text-decoration: none;
+	border-radius: 10px;
+}
+
+.example {
+	background-color: rgb(143, 197, 244);
+	max-width: fit-content;
 }
