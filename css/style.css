@@ -204,9 +204,7 @@ ul li {
 }
 
 .nav-list-index {
-	font-family: "Roboto_Condensed", sans-serif;
-	font-weight: 600;
-	font-size: 18px;
+	font-size: 14px;
 	color: rgb(19, 18, 18);
 	text-decoration: none;
 }
@@ -216,12 +214,12 @@ ul li {
 	transition: all 0.3s ease 0s;
 	padding: 0 10px;
 	color: rgb(19, 18, 18);
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .nav-links a:link {
 	color: rgb(8, 6, 153);
-	text-decoration: none;
+	text-decoration: solid;
 }
 
 .nav-links a:hover {
@@ -445,6 +443,17 @@ htmlstruktura-page-bg::after {
 	gap: 10rem;
 }
 
+.image-html {
+	width: 50%;
+	height: 50%;
+}
+
+.image-html:hover {
+	transform: scale(1.5); /*povećanje bez utjecaja na izgled u CSS-u*/
+	/*width: 100%;
+	height: 100%;*/
+}
+
 @media only screen and (max-width: 1400px) {
 	.grid-htmlstruktura-columns {
 		display: flex;
@@ -593,7 +602,7 @@ htmlstruktura-page-bg::after {
 	}
 }*/
 
-/*------ LINKOVI s hover MIJENJAJU BOJU ----------*/
+/*------ LINKOVI UNUTAR HAMBURGERA s hover MIJENJAJU POZADINSKU BOJU ----------*/
 
 .sweep-to-right {
 	transform: perspective(1px) translateZ(0);
@@ -642,7 +651,7 @@ htmlstruktura-page-bg::after {
 	transform: scaleX(1);
 }
 
-/*------- INDEX PAGE SECTION 3 (CSS STRUKTURA) ---------------*/
+/*-------------- INDEX PAGE SECTION 3 (CSS STRUKTURA) ---------------*/
 
 .css-struktura-page-bg {
 	background-color: cornflowerblue;
@@ -672,15 +681,15 @@ htmlstruktura-page-bg::after {
 	text-align: center;
 }
 
+.image-css:hover {
+	transform: scale(1.5);
+}
+
 .css-grid-columns {
 	display: grid;
 	grid-template-columns: 40% 1fr;
 	gap: 1rem;
 	margin: 0 30px 0 30px;
-}
-
-.css-blok-2 {
-	font-size: 14px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -732,17 +741,23 @@ footer a:hover {
 
 .index-footer-columns {
 	flex-grow: 1;
+	justify-content: space-evenly;
 	text-align: center;
 	font-size: 10px;
 }
 
-.index-footer-link {
-	font-size: 14px;
+.index-footer-links:last-child {
+	font-size: 30px;
+	padding: 0;
+	margin: 0;
 }
 
 @media only screen and (max-width: 1000px) {
 	.index-footer-main {
 		flex-direction: column;
+	}
+	.index-footer-columns {
+		padding: 10px;
 	}
 }
 
