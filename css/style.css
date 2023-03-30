@@ -214,16 +214,41 @@ ul li {
 	transition: all 0.3s ease 0s;
 	padding: 0 10px;
 	color: rgb(19, 18, 18);
-	text-decoration: underline;
 }
 
 .nav-links a:link {
-	color: rgb(8, 6, 153);
+	color: #080699;
 	text-decoration: solid;
 }
 
 .nav-links a:hover {
-	color: rgb(68, 107, 235);
+	color: #005db1;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
+}
+
+.nav-links a:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 100%;
+	bottom: 0;
+	background: #080699;
+	height: 1.5px;
+	-webkit-transition-property: right;
+	transition-property: right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+.nav-links a:hover:before,
+.nav-links a:focus:before,
+.nav-links a:active:before {
+	right: 0;
 }
 
 .logo-index {
@@ -450,8 +475,6 @@ htmlstruktura-page-bg::after {
 
 .image-html:hover {
 	transform: scale(1.5); /*povećanje bez utjecaja na izgled u CSS-u*/
-	/*width: 100%;
-	height: 100%;*/
 }
 
 @media only screen and (max-width: 1400px) {
@@ -651,6 +674,25 @@ htmlstruktura-page-bg::after {
 	transform: scaleX(1);
 }
 
+/*--------- STRELICA GORE ------------*/
+
+.arrow-up {
+	border-color: #820000 transparent;
+	border-style: solid;
+	border-width: 0px 20px 20px 20px;
+	height: 0px;
+	width: 0px;
+	display: flex;
+	margin-left: auto; /*pozicionira element u desnu stranu!*/
+	scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 700px) {
+	.arrow-up {
+		border-width: 0px 10px 10px 10px;
+	}
+}
+
 /*-------------- INDEX PAGE SECTION 3 (CSS STRUKTURA) ---------------*/
 
 .css-struktura-page-bg {
@@ -659,7 +701,7 @@ htmlstruktura-page-bg::after {
 	/*margin-top: -10px;*/
 	/*margin-bottom: auto;*/
 	height: 100%;
-	padding: 20px;
+	padding: 30px;
 	display: block;
 	box-sizing: inherit;
 	/*overflow: auto;*/
@@ -682,7 +724,7 @@ htmlstruktura-page-bg::after {
 }
 
 .image-css:hover {
-	transform: scale(1.5);
+	transform: scale(1.5); /*povećanje*/
 }
 
 .css-grid-columns {
@@ -717,6 +759,7 @@ footer {
 }
 
 footer a {
+	color: #080699;
 	text-decoration: none;
 	transition: 0.3s;
 }
@@ -743,13 +786,27 @@ footer a:hover {
 	flex-grow: 1;
 	justify-content: space-evenly;
 	text-align: center;
-	font-size: 10px;
+	font-size: 15px;
 }
 
 .index-footer-links:last-child {
-	font-size: 30px;
+	display: flex;
+	flex-grow: 1;
+	justify-content: end;
+	font-size: 20px;
 	padding: 0;
 	margin: 0;
+}
+
+.brands {
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	padding: 0 10px;
+	color: rgb(19, 18, 18);
+}
+
+.brands:hover {
+	font-size: 30px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -910,6 +967,88 @@ table {
 	color: #bd5942;
 }
 
+/*animacija stranice*/
+/*.animate-slide-right {
+	animation: animate-slide-right 3s ease 0s 1 normal forwards;
+}
+
+@keyframes animate-slide-right {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}*/
+
+.loptice {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	animation: loptice 2s ease 0s 1 normal forwards;
+}
+
+@keyframes loptice {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+
+.tekst-u-krugu-atributi {
+	background: yellow;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tekst-u-krugu-atributi:hover {
+	transform: scale(1.5);
+}
+
 .nav-list-atributi {
 	box-sizing: border-box;
 	display: flex;
@@ -917,11 +1056,6 @@ table {
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-}
-
-.h2-dark {
-	color: #4a4737;
-	text-shadow: none;
 }
 
 /*---------------------BOX MODEL NA STRANICI CSSBOXMODEL----------------------------*/
