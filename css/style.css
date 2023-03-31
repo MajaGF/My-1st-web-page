@@ -266,10 +266,12 @@ ul li {
 	border-radius: 50px;
 	cursor: pointer;
 	transform: perspective(1px) translateZ(0);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	box-shadow: 5px 5px 10px 2px #000008;
 	position: relative;
 	transition-property: color;
+	-webkit-transition-property: color;
 	transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
 }
 
 .index-button:before {
@@ -284,8 +286,11 @@ ul li {
 	border-radius: 50px;
 	transform: scale(0);
 	transition-property: transform;
+	-webkit-transition-property: transform;
 	transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
 	transition-timing-function: ease-out;
+	-webkit-transition-timing-function: ease-out;
 }
 .index-button:hover,
 .index-button:focus,
@@ -632,7 +637,9 @@ htmlstruktura-page-bg::after {
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 	position: relative;
 	transition-property: color;
+	-webkit-transition-property: color;
 	transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
 }
 .sweep-to-right::before {
 	content: "";
@@ -660,8 +667,11 @@ htmlstruktura-page-bg::after {
 	transform: scaleX(0);
 	transform-origin: 0 50%;
 	transition-property: transform;
+	-webkit-transition-property: transform;
 	transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
 	transition-timing-function: ease-out;
+	-webkit-transition-timing-function: ease-out;
 }
 .sweep-to-right:hover,
 .sweep-to-right:focus,
@@ -962,7 +972,7 @@ table {
 		#f3c4ea
 	);
 	padding: 30px;
-	color: #bd5942;
+	color: #315caa;
 }
 
 /*animacija stranice*/
@@ -983,59 +993,61 @@ table {
 }*/
 
 .loptice {
-	/*animation: loptice 2s ease 0s 1 normal forwards;*/
-	position: relative;
+	/*position: relative;*/
 	display: grid;
 	place-content: center;
-	height: 650px;
+	height: 605px;
 }
 
-@keyframes loptice {
-	0% {
-		animation-timing-function: ease-in;
-		opacity: 0;
-		transform: translateY(-250px);
-	}
-
-	38% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	55% {
-		animation-timing-function: ease-in;
-		transform: translateY(-65px);
-	}
-
-	72% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-
-	81% {
-		animation-timing-function: ease-in;
-		transform: translateY(-28px);
-	}
-
-	90% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-
-	95% {
-		animation-timing-function: ease-in;
-		transform: translateY(-8px);
-	}
-
-	100% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
+.tekst-u-krugu-atributi:nth-child(1) {
+	animation: bounce 8s alternate-reverse 0s 1 cubic-bezier(0.5, 0.05, 1, 0.5);
+	-webkit-animation: bounce 8s alternate-reverse 0s 1
+		cubic-bezier(0.5, 0.05, 1, 0.5);
 }
+
+.tekst-u-krugu-atributi:nth-child(2) {
+	animation: bounce 8s alternate-reverse 1s 1 cubic-bezier(0.5, 0.05, 1, 0.5);
+	-webkit-animation: bounce 8s alternate-reverse 1s 1
+		cubic-bezier(0.5, 0.05, 1, 0.5);
+}
+
+.tekst-u-krugu-atributi:nth-child(3) {
+	animation: bounce 8s alternate-reverse 2s 1 cubic-bezier(0.5, 0.05, 1, 0.5);
+	-wbkit-animation: bounce 8s alternate-reverse 2s 1
+		cubic-bezier(0.5, 0.05, 1, 0.5);
+}
+
+.tekst-u-krugu-atributi:nth-child(4) {
+	animation: bounce 8s alternate-reverse 3s 1 cubic-bezier(0.5, 0.05, 1, 0.5);
+	-webkit-animation: bounce 8s alternate-reverse 3s 1
+		cubic-bezier(0.5, 0.05, 1, 0.5);
+}
+
+.tekst-u-krugu-atributi:nth-child(5) {
+	animation: bounce 8s alternate-reverse 4s 1 cubic-bezier(0.5, 0.05, 1, 0.5);
+	-webkit-animation: bounce 8s alternate-reverse 4s 1
+		cubic-bezier(0.5, 0.05, 1, 0.5);
+}
+
+.tekst-u-krugu-atributi:nth-child(6) {
+	animation: bounce 8s alternate-reverse 5s 1 cubic-bezier(0.5, 0.05, 1, 0.5);
+	-webkit-animation: bounce 8s alternate-reverse 5s 1
+		cubic-bezier(0.5, 0.05, 1, 0.5);
+}
+
+/*@keyframes bounce {
+	from {
+		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+	to {
+		transform: translate3d(359, 200px, 100px);
+		-webkit-transform: translate3d(359, 200px, 100px);
+	}
+}*/
 
 .tekst-u-krugu-atributi {
-	background: yellow;
+	background: #ffeeca;
 	display: block;
 	position: relative;
 	top: 51%;
@@ -1046,6 +1058,7 @@ table {
 	border-radius: 50%;
 	text-align: center;
 	line-height: 100px;
+	box-shadow: 5px 5px 10px 2px #00286d;
 }
 
 .deg-30 {
@@ -1072,6 +1085,7 @@ table {
 	transform: rotate(341deg) translate(251px) rotate(-341deg);
 }
 
+/*--------- HOVERTEXT ---------*/
 .hovertext {
 	position: relative;
 }
@@ -1080,21 +1094,18 @@ table {
 	content: attr(data-hover);
 	visibility: hidden;
 	opacity: 0;
-	display: flex;
-	flex-direction: row;
-	width: 100px;
-	height: 100px;
-	background-color: rgb(205, 228, 91);
-	color: #161616;
+	padding: 0 20px;
+	width: max-content;
+	background-color: #e6f4f1;
+	color: #0046b3;
 	font-size: 1rem;
 	text-align: center;
 	border-radius: 5px;
-	padding: 10px;
 	transition: opacity 1s ease-in-out;
 	position: absolute;
 	z-index: 1;
-	left: 120%;
-	top: 120%;
+	right: 160%;
+	top: 40%;
 }
 
 .hovertext:hover:before {
@@ -1106,11 +1117,16 @@ table {
 	box-sizing: border-box;
 	display: flex;
 	flex-grow: 1;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	flex-wrap: wrap;
 }
 
+.tekst-krivulja {
+	font-size: 20px;
+	text-align: center;
+	padding-bottom: 50px;
+}
 /*---------------------BOX MODEL NA STRANICI CSSBOXMODEL----------------------------*/
 /* the CSS BOX MODEL - slaže se po sljedećem redu:
 	margin:
