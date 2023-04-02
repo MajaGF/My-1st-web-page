@@ -3,7 +3,7 @@
 <html lang="hr-HR">
 	<head>
 		<meta charset="utf-8" />
-		<title>Atributi</title>
+		<title>HTML atributi</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="HTML, CSS, atributi" />
 		<meta name="keywords" content="html, css" />
@@ -11,61 +11,75 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 
-	<body id="top" class="atributi-page-bg animate-slide-right">
-		<header class="nav-list-atributi">
+	<body id="top" class="atributi-page-bg">
+		<header class="nav-list-elementi">
 			<img class="logo-elementi" src="htmlcss.png" alt="logo" />
 			<button class="index-button" onclick="history.back()">Nazad</button>
 			<a class="home" href="index.html"
 				><button class="index-button">Home page</button></a
 			>
+			<a href="#"><button class="index-button">Kontakt</button></a>
 		</header>
+
 		<main>
 			<div class="containter-wrapp">
 				<h1 title="ATRIBUTI HTML-a">ATRIBUTI HTML-a</h1>
 				<div>
-					<p class="tekst-krivulja">
+					<p class="p-center">
 						pružaju dodatne informacije o HTML elementima, pišu se kao: name="value"
 					</p>
 
 					<div class="loptice">
-						<div class="tekst-u-krugu-atributi deg-270">
-							<span
-								class="hovertext"
-								data-hover="Hypertext Reference - upisuje se URL stranice na koju vodi
-				poveznica"
-								>href</span
-							>
-						</div>
-						<div class="tekst-u-krugu-atributi deg-340">
-							<span class="hovertext" data-hover="source file"> src</span>
+						<div class="tekst-u-krugu-atributi deg-270 tooltip">
+							href
+							<div class="left-tooltip">
+								<p>
+									Hypertext Reference - upisuje se URL stranice na koju vodi poveznica
+								</p>
+								<p>href&equals;&quot;URL&quot;</p>
+								<i></i>
+							</div>
 						</div>
 
-						<div class="tekst-u-krugu-atributi deg-200">
-							<span
-								class="hovertext"
-								data-hover="alternativni tekst (na primjer kod
-				slike u slučaju da se ne učita)">
-								alt</span
-							>
+						<div class="tekst-u-krugu-atributi deg-340 tooltip">
+							src
+							<div class="right-tooltip">
+								<p>source file</p>
+								<i></i>
+							</div>
 						</div>
-						<div class="tekst-u-krugu-atributi deg-150">
-							<span
-								class="hovertext"
-								data-hover="opis linka (npr. idi na
-				xx) -- s mišem preko teksta prikazuje se naziv!">
-								title</span
-							>
+
+						<div class="tekst-u-krugu-atributi deg-200 tooltip">
+							alt
+							<div class="left-tooltip">
+								<p>
+									alternativni tekst (na primjer kod slike u slučaju da se ne učita)
+								</p>
+								<i></i>
+							</div>
 						</div>
-						<div class="tekst-u-krugu-atributi deg-30">
-							<span
-								class="hovertext"
-								data-hover="target&equals;&nbsp;&lowbar;blank&vert;&nbsp;&lowbar;self&vert;&nbsp;&lowbar;parent&vert;&nbsp;&lowbar;top&vert;&nbsp;framename;">
-								target</span
-							>
+						<div class="tekst-u-krugu-atributi deg-150 tooltip">
+							title
+							<div class="left-tooltip">
+								<p>
+									opis linka (npr. idi na xx) -- s mišem preko teksta prikazuje se naziv!
+								</p>
+								<i></i>
+							</div>
+						</div>
+						<div class="tekst-u-krugu-atributi deg-30 tooltip">
+							target
+							<div class="right-tooltip">
+								<p>target&equals;&lowbar;blank</p>
+								<p>target&equals;&lowbar;self</p>
+								<p>target&equals;&lowbar;parent</p>
+								<p>target&equals;&lowbar;top</p>
+								<i></i>
+							</div>
 						</div>
 
 						<div class="tekst-u-krugu-atributi deg-90">
-							<span class="hovertext" data-hover="HTML Attribute Reference">
+							<span>
 								<a
 									href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes"
 									alt="HTML Attribute Reference"
@@ -76,8 +90,8 @@
 						</div>
 					</div>
 				</div>
-				<a href="#top" class="arrow-up"></a>
 			</div>
+			<a href="#top" class="arrow-up"></a>
 		</main>
 	</body>
 </html>
