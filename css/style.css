@@ -135,7 +135,7 @@ h2 {
 h3 {
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
-	color: rgb(46, 171, 27);
+	color: #d4cde3;
 	text-align: center;
 	font-size: 2rem;
 	margin-bottom: 20px;
@@ -897,7 +897,7 @@ footer a:hover {
 	filter: drop-shadow(6px 5px 10px #6bf4ea);
 }
 
-table {
+.table-elementi {
 	border-collapse: collapse;
 	border: solid rgb(52, 35, 210);
 	font-family: "lexendlight", sans-serif;
@@ -950,7 +950,7 @@ table {
 		font-size: 1.5rem;
 	}
 
-	table {
+	.table-elementi {
 		font-size: 0.6rem;
 	}
 
@@ -1276,7 +1276,7 @@ table {
 
 /*------------------ TABLICA NA STRANICI SIMBOLI ZNAKOVI --------------------*/
 
-table {
+.table-simboli {
 	border-collapse: collapse;
 	border: solid rgb(52, 35, 210);
 	font-family: "lexendlight", sans-serif;
@@ -1380,7 +1380,7 @@ table {
 
 /*-------------------- TABLICA NA STRANICI TABLICA-PRIMJER --------------*/
 
-.kratki-naziv-tablice table {
+/*.kratki-naziv-tablice table {
 	border-collapse: collapse;
 	border: 1px solid rgb(200, 200, 200);
 	letter-spacing: 1px;
@@ -1416,7 +1416,7 @@ table {
 
 .kratki-naziv-tablice tfoot {
 	background-color: #ae1cda;
-}
+}*/
 
 /*---------------------------------LISTE-----------------------------*/
 
@@ -1467,25 +1467,24 @@ table {
 /*----------- KONTAKT FORM ---------------*/
 
 .kontakti-page-bg {
-	background-color: #bcbcbd;
+	background-color: #c9c7ef;
 	margin: 0;
 	padding: 0;
 	color: #315caa;
 }
 
 .container-kontakt {
-	width: 90%;
-	height: 700px;
-	margin: auto;
-	padding-bottom: 30px;
+	width: 80%;
+	height: 900px;
+	margin: 30px auto;
 	overflow: hidden;
 	display: grid;
-	gap: 3rem;
+	gap: 1rem;
 	grid-auto-flow: column;
-	grid-template-columns: repeat(2 1fr);
 	justify-content: center;
 	align-content: center;
-	background-color: rgb(235, 235, 167);
+	background-color: #d9d9e1;
+	border-radius: 2rem;
 }
 
 .kontakt-1 {
@@ -1493,7 +1492,7 @@ table {
 	gap: 1rem;
 	align-items: center;
 	justify-items: center;
-	height: 600px;
+	height: 800px;
 	width: 600px;
 }
 
@@ -1501,74 +1500,155 @@ table {
 	display: flex;
 	flex-grow: 1;
 	justify-content: space-evenly;
-
 	gap: 2rem;
 	margin-left: 0;
 	width: 600px;
 }
 
+.p-k1 {
+	color: #767474;
+}
+
+.p-k2 {
+	font-size: 14px;
+}
+
+.map iframe {
+	width: 500px;
+	height: 200px;
+	border: 0;
+	border-radius: 1rem;
+}
 .kontakt-2 {
 	display: in-line-flex;
-	text-align: center;
-	height: 600px;
+	text-align: right;
+	height: 800px;
 	width: 600px;
 }
 
 .kontakt-image {
 	max-height: 100%;
 	max-width: 100%;
+	border-radius: 1rem;
 }
 
-form * {
-	text-transform: uppercase; /*sve se ispunjava velikim slovima*/
-}
-
-input {
+.form-kontakti input {
+	font-family: "Lexend-regular";
 	padding: 10px;
 	margin: 10px;
 	width: 70%;
-	background-color: rgba(136, 133, 133, 0.5);
-	color: white;
-	border: none;
+	background-color: #eeedff;
+	color: #7a88f2;
+	border-bottom: solid 2px #7d516c;
+	border-left: dotted 1px #7d516c;
+	border-top: 0;
+	border-right: 0;
+	border-radius: 1rem;
 	outline: none;
 }
 
-input::placeholder {
-	color: white;
+.form-kontakti input::placeholder {
+	color: #7a88f2;
 }
 
-textarea {
+.form-kontakti textarea {
+	font-family: "Lexend-regular";
 	padding: 10px;
 	margin: 10px;
-	width: 70%;
-	background-color: rgba(136, 133, 133, 0.5);
-	color: white;
-	border: none;
+	width: 95%;
+	color: #7a88f2;
+	background-color: #eeedff;
+	border-bottom: solid 2px #7d516c;
+	border-left: dotted 1px #7d516c;
+	border-radius: 1rem;
+	border-top: 0;
+	border-right: 0;
 	outline: none;
 }
-textarea::placeholder {
-	color: white;
+.form-kontakti textarea::placeholder {
+	color: #7a88f2;
 }
 
-.submit {
+.submit-kontakti {
+	font-family: "Lexend-regular";
 	width: 40%;
 	background: none;
 	padding: 4px;
 	outline: none;
 	font-size: 13px;
-	font-weight: bold;
-	letter-spacing: 2px;
 	height: 33px;
 	text-align: center;
 	cursor: pointer;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	margin-left: 3%;
-	border: 2px solid rgb(190, 190, 190);
-	color: rgb(190, 190, 190);
+	border: 1px solid #7a88f2;
+	border-radius: 0.5rem;
+	color: #7a88f2;
 }
 
-.submit:hover {
-	border: 1px solid #fff;
-	color: #fff;
+.submit-kontakti:hover {
+	color: #7a88f2;
 	cursor: pointer;
+}
+
+.bounce-to-right {
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+
+.bounce-to-right:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #d0cff4;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.bounce-to-right:hover,
+.hvr-bounce-to-right:focus,
+.hvr-bounce-to-right:active {
+	color: white;
+}
+
+.bounce-to-right:hover:before,
+.hvr-bounce-to-right:focus:before,
+.hvr-bounce-to-right:active:before {
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+	-webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+@media only screen and (max-width: 1550px) {
+	.container-kontakt {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: fit-content;
+		width: fit-content;
+	}
+
+	.kontakt-2 {
+		display: none;
+	}
 }
